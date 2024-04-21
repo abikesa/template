@@ -1,0 +1,6 @@
+- Babyface clearly uses a [template](https://www.youtube.com/watch?v=3eHc0Xz_Hio)
+   - Witness the absence of lyrics for the chorus of "Shoop"
+   - His explanation confirms this
+- If I'd recommended a "hard-coded" template for Stata HW3, there'd have been less distress
+   - But its a good starting point
+   - Wherein the "hard-coded" is gradually replaced with "macro"  
