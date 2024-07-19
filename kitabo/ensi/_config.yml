@@ -22,7 +22,7 @@ execute:
 # HTML-specific settings
 html:
   navbar_number_sections    : False  # Add a number to each section in your left navbar
-  home_page_in_navbar       : True  # Whether to include your home page in the left Navigation Bar; I like this!!!!!!!
+  home_page_in_navbar       : False  # Whether to include your home page in the left Navigation Bar; I like this!!!!!!!
   use_repository_button     : False  # Whether to add an "Repository" button to pages. If `true`, repository information in repository: must be filled in
   use_issues_button         : False  # Whether to add an "Open issue" button to pages. If `true`, repository information in repository: must be filled in
   use_edit_page_button      : False  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
