@@ -11,14 +11,16 @@
    - $P(T>t)$
 - $h(t)$
    - Encoding everything
-   - $h(t)=\lambda=]frac{f(t)}{S(t)}$
+   - $h(t)=\lambda=\frac{f(t)}{S(t)}$
 
 ##### Collective
-- $X$ various patterns of behavior known to man from the beginning of time
+- $X$ 
+   - Various patterns of `behavior known to man` from the beginning of time
 
 ##### Personal
 - $\beta$
+   - All the parameters or `gene loci` 
 - $SV'$
+   - You may think of these are `allelic variants` 
    - Binary: algorithm, choices, decisions, `propensities` 
    - These affect time-to-event & are decoded by the `scenario vector`
-
