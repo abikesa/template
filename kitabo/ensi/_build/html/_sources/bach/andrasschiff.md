@@ -1,0 +1,1 @@
+- [some shit](https://www.youtube.com/watch?v=sFTAjQ07vYc&t=332s)
