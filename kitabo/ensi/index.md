@@ -17,7 +17,7 @@
 - $X$ 
    - Various patterns of `behavior known to man` from the beginning of time
 
-##### Personal
+##### Decisions
 - $\beta$
    - All the parameters or `gene loci` 
 - $SV'$
