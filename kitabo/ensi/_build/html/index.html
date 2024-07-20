@@ -368,10 +368,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Preface</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biology">Biology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collective">Collective</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decisions">Decisions</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-entourage">Application to “Entourage”</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -382,38 +387,38 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="preface">
-<span id="act1-p1"></span><h1>Preface<a class="headerlink" href="#preface" title="Permalink to this heading">#</a></h1>
+  <section id="preface">
+<h1>Preface<a class="headerlink" href="#preface" title="Permalink to this heading">#</a></h1>
 <section id="biology">
 <h2>Biology<a class="headerlink" href="#biology" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f(t)\)</span></p>
+<li><p><strong><span class="math notranslate nohighlight">\(f(t)\)</span></strong></p>
 <ul>
-<li><p>Incompletely observed processes</p>
+<li><p>Incompletely observed processes.</p>
 <ul>
-<li><p>Do not include fantasy <span class="math notranslate nohighlight">\(\gt3\sigma\)</span> <code class="docutils literal notranslate"><span class="pre">shock-value</span></code> events</p></li>
-<li><p>Only events observed by entire human race</p></li>
-<li><p>Private hallucinations like Hamlets ghost welcome</p>
+<li><p>Exclude fantasy <span class="math notranslate nohighlight">\(\gt3\sigma\)</span> <code class="docutils literal notranslate"><span class="pre">shock-value</span></code> events.</p></li>
+<li><p>Only include events observable by the entire human race.</p></li>
+<li><p>Private hallucinations, like Hamlet’s ghost, are included.</p>
 <ul>
-<li><p>As long as they have no agency</p></li>
-<li><p>Just the delusional individual acting</p></li>
+<li><p>Provided they have no agency.</p></li>
+<li><p>They only influence the delusional individual’s actions.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Need for nonparametric approach to <span class="math notranslate nohighlight">\(S(t)\)</span></p></li>
-<li><p>Approach eschews <span class="math notranslate nohighlight">\(1 - F(t)\)</span></p></li>
+<li><p>Necessitates a nonparametric approach to <span class="math notranslate nohighlight">\(S(t)\)</span>.</p></li>
+<li><p>This approach avoids <span class="math notranslate nohighlight">\(1 - F(t)\)</span>.</p></li>
 </ul>
 </li>
-<li><p><span class="math notranslate nohighlight">\(S(t)\)</span></p>
+<li><p><strong><span class="math notranslate nohighlight">\(S(t)\)</span></strong></p>
 <ul>
-<li><p><span class="math notranslate nohighlight">\(P(T&gt;t)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(T&gt;t)\)</span>, the survival function.</p></li>
 </ul>
 </li>
-<li><p><span class="math notranslate nohighlight">\(h(t)\)</span></p>
+<li><p><strong><span class="math notranslate nohighlight">\(h(t)\)</span></strong></p>
 <ul>
-<li><p>Encoding everything</p></li>
-<li><p><span class="math notranslate nohighlight">\(h(t)=\lambda=\frac{f(t)}{S(t)}\)</span></p></li>
+<li><p>Encoding everything.</p></li>
+<li><p><span class="math notranslate nohighlight">\(h(t)=\lambda=\frac{f(t)}{S(t)}\)</span>, the hazard function.</p></li>
 </ul>
 </li>
 </ul>
@@ -421,11 +426,11 @@ document.write(`
 <section id="collective">
 <h2>Collective<a class="headerlink" href="#collective" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(X\)</span></p>
+<li><p><strong><span class="math notranslate nohighlight">\(X\)</span></strong></p>
 <ul>
-<li><p>Various patterns of <code class="docutils literal notranslate"><span class="pre">behavior</span> <span class="pre">known</span> <span class="pre">to</span> <span class="pre">man</span></code> from the beginning of time</p></li>
-<li><p>These are the factors that affect <code class="docutils literal notranslate"><span class="pre">time-to-event</span></code> of processes</p></li>
-<li><p>Agency manifests by altering the values (alleles) of these factors (genetic loci)</p></li>
+<li><p>Various patterns of <code class="docutils literal notranslate"><span class="pre">behavior</span> <span class="pre">known</span> <span class="pre">to</span> <span class="pre">man</span></code> since the beginning of time.</p></li>
+<li><p>These factors influence the <code class="docutils literal notranslate"><span class="pre">time-to-event</span></code> of processes.</p></li>
+<li><p>Agency is expressed by altering the values (alleles) of these factors (genetic loci).</p></li>
 </ul>
 </li>
 </ul>
@@ -433,20 +438,29 @@ document.write(`
 <section id="decisions">
 <h2>Decisions<a class="headerlink" href="#decisions" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\beta\)</span></p>
+<li><p><strong><span class="math notranslate nohighlight">\(\beta\)</span></strong></p>
 <ul>
-<li><p>All the parameters or <code class="docutils literal notranslate"><span class="pre">gene</span> <span class="pre">loci</span></code></p></li>
+<li><p>Represents all the parameters or <code class="docutils literal notranslate"><span class="pre">gene</span> <span class="pre">loci</span></code>.</p></li>
 </ul>
 </li>
-<li><p><span class="math notranslate nohighlight">\(SV'\)</span></p>
+<li><p><strong><span class="math notranslate nohighlight">\(SV'\)</span></strong></p>
 <ul>
-<li><p>You may think of these are <code class="docutils literal notranslate"><span class="pre">allelic</span> <span class="pre">variants</span></code></p></li>
-<li><p>Binary: algorithm, choices, decisions, <code class="docutils literal notranslate"><span class="pre">propensities</span></code></p></li>
-<li><p>These affect time-to-event &amp; are decoded by the <code class="docutils literal notranslate"><span class="pre">scenario</span> <span class="pre">vector</span></code></p></li>
+<li><p>Think of these as <code class="docutils literal notranslate"><span class="pre">allelic</span> <span class="pre">variants</span></code>.</p></li>
+<li><p>Binary: algorithm, choices, decisions, <code class="docutils literal notranslate"><span class="pre">propensities</span></code>.</p></li>
+<li><p>These affect time-to-event and are decoded by the <code class="docutils literal notranslate"><span class="pre">scenario</span> <span class="pre">vector</span></code>.</p></li>
 </ul>
 </li>
 </ul>
+<hr class="docutils" />
 </section>
+</section>
+<section id="application-to-entourage">
+<h1>Application to “Entourage”<a class="headerlink" href="#application-to-entourage" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>The show “Entourage” can be viewed through this lens, with its recurring fantastical elements representing deviations from the general human experience, akin to events far outside the normal probability density function (<span class="math notranslate nohighlight">\(\gt3\sigma\)</span> events).</p></li>
+<li><p>These fantastical elements, while entertaining, do not reflect the collective human experience and thus distort the realistic portrayal of life, much like how high variance events (<span class="math notranslate nohighlight">\(\gt3\sigma\)</span>) are excluded from certain biological models.</p></li>
+</ul>
+<p>This approach provides a structured way to critique and analyze the narrative structure and frequency of fantastical events in “Entourage,” placing it within a broader context of human experience and survival analysis.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -506,10 +520,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Preface</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biology">Biology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collective">Collective</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decisions">Decisions</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-entourage">Application to “Entourage”</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
