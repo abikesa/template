@@ -21,6 +21,8 @@
 ##### Collective
 - $X$ 
    - Various patterns of `behavior known to man` from the beginning of time
+   - These are the factors that affect `time-to-event` of processes
+   - Agency manifests by altering the values (alleles) of these factors (genetic loci)
 
 ##### Decisions
 - $\beta$
