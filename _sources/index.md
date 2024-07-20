@@ -5,6 +5,11 @@
 ##### Biology
 - $f(t)$
    - Incompletely observed processes
+      - Do not include fantasy $\gt3\sigma$ `shock-value` events
+      - Only events observed by entire human race
+      - Private hallucinations like Hamlets ghost welcome
+         - As long as they have no agency
+         - Just the delusional individual acting 
    - Need for nonparametric approach to $S(t)$
    - Approach eschews $1 - F(t)$
 - $S(t)$
