@@ -1,137 +1,20 @@
 (act1-mort)=
 # Mortality
 
-## GitHub branches 
+## Backstory, $F(t)$
 
-“I’m going to motivate this thesis by talking about three end-users (or targets)”:
+The most compelling romantic scene in "Game of Thrones" has to be the cave scene between Jon Snow and Ygritte in Season 3, Episode 5 ("Kissed by Fire"). This moment is layered with emotional depth, genuine passion, and a profound sense of intimacy that transcends the brutality and political machinations typical of the series.
 
-### Dionysus 1, 2, 3 (Target)
-- Patients
-- Caregivers
-- Developers & Students
+The scene stands out not just for its romantic intensity but also for its symbolic significance. Jon, a sworn member of the Night's Watch, breaks his vow of celibacy, showcasing his deep, conflicted feelings for Ygritte. Ygritte, on the other hand, embodies wildling freedom and raw emotion, challenging Jon’s loyalty and beliefs.
 
-### Sing O Muse 4 (Product)
-- WebApp
+Their interaction is tender and genuine, and the setting—a secluded cave with a hot spring—adds to the scene's mystique and allure. Ygritte’s line, “We should have stayed in that cave,” resonates throughout their story arc, underscoring the fleeting nature of their happiness and the harsh reality waiting outside the cave. This moment encapsulates the tragedy and beauty of their doomed love, making it one of the most memorable romantic scenes in the series.
 
-### Apollo 5, 6 (Dependencies)
-- Risk: Mortality & Kidney Failure 
-- Sentinel: Hospitalization 
+## Encoding, $h(t)$
 
+You're right, calling it "playful" doesn't quite capture the gravity of that moment. Ygritte's actions were driven by a complex mix of love and betrayal, making it a scene rich with emotional conflict {cite}`nietzsche_attempt_2003`.
 
-Each JHU repo dedicated to one dataset 
-One repo dedicated to all `s0`, `b`, `V`
+The scene where Ygritte aims her bow and arrow at Jon Snow as he flees is indeed charged with tension and heartbreak. In Season 3, Episode 10 ("Mhysa"), when Jon decides to return to the Night's Watch, Ygritte confronts him in the wilderness. She’s visibly torn between her love for Jon and her sense of betrayal, feeling deeply hurt by his perceived abandonment {cite}`muzaale2014risk`.
 
-The App only has SV (from dictation, patient notes, drop-down menu)
-
-`s0` -> accelerated failure time manipulation, as seen with _Black-Schole-sMorton_
-
-#
-
-```
-      1. Construct
-                  \
-   3. Language -> 2. Adjective -> 5. Verb -> 6. Object
-                  /
-                   4. Subject
-```
+As Jon rides away, Ygritte’s decision to shoot him with arrows is a powerful expression of her inner turmoil. Each shot is fueled by a blend of anger, pain, and sorrow. Despite her fierce demeanor, the hesitation in her actions reveals the depth of her feelings for Jon. She wounds him but stops short of killing him, highlighting the tragic nature of their relationship. Ygritte’s final words, "You know nothing, Jon Snow," echo the complexity of their bond, filled with love, misunderstanding, and irreconcilable differences. elements Nietzsche increasingly valued :cite:`nietzsche_attempt_2003`.
 
 
-1. Syntax:: Deep
-   - Subject
-   - Verb
-   - Object
-
-```
-       1. Validity
-                  \
-    3. Formula -> 2. Cost -> 5. Transparency -> 6. Datasets
-                  /
-                   4. Expertise
-```
-
-2. Transformation
-     
-   - Chomsky's theory of `transformational-generative` grammar involves the idea of transforming a deep structure into a surface structure through various transformations. Here are some types of transformations in Chomskyan syntax:
-   - Also, [Michel Foucault](https://chomsky.info/1971xxxx/) is subsummed here since verbs could be active or passive, implying hierarchy and power or lack thereof
-
-   1. **Passivization:**
-      - Example: "The cat chased the mouse" (active) transforms into "The mouse was chased by the cat" (passive).
-
-   2. **Clefting:**
-      - Example: "I saw the movie last night" transforms into "It was the movie that I saw last night."
-
-   3. **Question Formation:**
-      - Example: "She is reading a book" transforms into "Is she reading a book?"
-
-   4. **Movement:**
-      - Involves moving constituents from one position in a sentence to another.
-      - Example: "John will give a book to Mary" transforms into "To Mary, John will give a book."
-
-   5. **Extraposition:**
-      - Involves moving constituents to the end of a sentence.
-      - Example: "I believe that the world is round" transforms into "I believe the world is round."
-
-   6. **Conjunction Reduction:**
-      - Example: "John likes coffee, and Mary likes tea" transforms into "John likes coffee, Mary tea."
-
-   7. **Relative Clause Formation:**
-      - Example: "The man who is sitting over there is my friend" transforms into "The man sitting over there is my friend."
-
-   8. **Equi-NP Deletion:**
-      - Example: "John likes coffee, and Bill does too" transforms into "John likes coffee, and Bill does."
-
-   These transformations play a crucial role in Chomsky's theory of syntax, allowing for the generation of a wide variety of sentences from a relatively small set of underlying structures. Keep in mind that the list is not exhaustive, and there are more transformations and variations within Chomsky's framework.
-   
-```
-           1. Voir
-                  \
-     3. Savoir -> 2. Good & Evil -> 5. Hierarchy -> 6. Relationships
-                  /
-                   4. Pouvoir
-```
-
-3. Metaphor
-   - Increased ambiguity
-   - Recipient can project their affect onto this ambiguity
-   - Here `meaning` becomes `participatory`
-   - Crux of the matter is `empowering` a client or `Principal` to regain `Agency`
-   - Typically "informed" consent
-   - Which really is a beautifully curated [dataset](https://github.com/abikesa/datasets)
-   - Sophistication, analytic capability, reaching inferences: give client the tools to achieve this
-   - Nike, Apple, Microsoft, and Bloomberg have business models explicitly founded on this
-  
-
-
-
-This book ... {ref}`rr-vcs`, {ref}`rr-testing`, and {ref}`rr-ci`.
-However, technical skills are just one aspect of making data science research "open for all".
-Hence, in February 2020, _The Turing Way_ expanded into a series of guides: {ref}`rr`, {ref}`pd`, {ref}`cm`, {ref}`cl`, and {ref}`er`.
-Through community contributions, the project has grown into multiple guides, a global community and numerous resources built and shared by the members of our community.
-
-```{figure} https://media.licdn.com/dms/image/C5112AQF-_ei9ONe76g/article-cover_image-shrink_720_1280/0/1531066443929?e=2147483647&v=beta&t=mYThyJQOXaRkYaJfAsKu406B0ZqoBlBrCvWaG-2hiGY
----
-name: evolution-openscience
-alt: This image shows the evolving interest of a new researcher in sharing their work using open science practices.
----
-_Black-Scholes-Merton_. Easy to see how the pricing depends on the underlying distribution. Also why the academics stick to the European call option and don't bother with the American version (the authors were American!)
-```
-
-Lessons learned from _The Turing Way_ will help design projects with reproducible, collaborative, and ethical research frameworks.
-It will also ensure that different stakeholders of research know which parts of the "responsibility of reproducibility" they can affect, and what they should do to 'nudge' research and data science to be more efficient, effective, and understandable.
-
-```{admonition} Highlights from the First Impact Story from 2019
-**Changing the culture of data science**
-
-> _The Turing Way_ is an online handbook – and global community – dedicated to fostering gold-standard reproducible research. It’s a cultural movement with the potential to transform data science
-
-- There is a crisis of reproducibility  in science. 
-- ‘Publish-or-perish’ incentives and excessive data secrecy stifle progress and waste resources: siloed science is slow science. 
-
-_Visit The Alan Turing Institute website for the [full impact story](https://www.turing.ac.uk/research/impact-stories/changing-culture-data-science)._
-```
-
-
-
-```{Note}
-A history section will be added soon in this chapter.
-```

@@ -63,6 +63,8 @@
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter3';</script>
     <script src="../_static/script.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -181,9 +183,9 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Aim 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter1.html">Mortality</a></li>
-
 <li class="toctree-l2"><a class="reference internal" href="chapter2.html">ESRD</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Frailty</a></li>
+
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Aim 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -365,10 +367,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-world-according-to-nassim-taleb">The World According to Nassim Taleb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-strategy-what-problems-do-you-have-with-financial-engineering">Derivatives Strategy: What problems do you have with financial engineering?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Frailty</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#literary-criticism-through-survival-analysis">Literary Criticism through Survival Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-1">Aim 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biology">Biology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collective">Collective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decisions">Decisions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-entourage">Application to “Entourage”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-to-game-of-thrones">Comparison to “Game of Thrones”</a></li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -381,84 +393,87 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="frailty">
 <span id="act1-frail"></span><h1>Frailty<a class="headerlink" href="#frailty" title="Permalink to this heading">#</a></h1>
-<section id="the-world-according-to-nassim-taleb">
-<h2>The World According to Nassim Taleb<a class="headerlink" href="#the-world-according-to-nassim-taleb" title="Permalink to this heading">#</a></h2>
-<p>© 1996 – Derivatives Strategy</p>
+<p>Your approach to literary criticism through the lens of survival analysis is both innovative and compelling. It bridges the gap between the empirical and the creative, offering a structured methodology to evaluate narrative elements.</p>
+<p>Here’s a refined version of your outline:</p>
 </section>
-<section id="derivatives-strategy-what-problems-do-you-have-with-financial-engineering">
-<h2>Derivatives Strategy: What problems do you have with financial engineering?<a class="headerlink" href="#derivatives-strategy-what-problems-do-you-have-with-financial-engineering" title="Permalink to this heading">#</a></h2>
-<p><strong>Nassim Taleb:</strong> I disagree with such an approach in financial risk management. Some folks looked at the literature and saw differential equations and said, “Gee, it’s like engineering.” Engineering relies on models because you can capture the relationships in the physical world very well. Models in the social sciences serve a different purpose. They make strong assumptions. Economists have known for a long time that math in their profession has a different meaning. It’s just a tool, a way to express yourself.</p>
-<p><strong>DS:</strong> So real engineering could lead to a bridge that you could reliably drive cars across. But modeling in financial engineering isn’t certain enough to run a portfolio…</p>
-<p><strong>NT:</strong> Exactly. In finance, you are not as confident about the parameters. The more you expand your model by adding parameters, the more you become trapped into an inextricable apparatus of relationships. It is called overfitting.</p>
-<p><strong>DS:</strong> What do you think of value at risk?</p>
-<p><strong>NT:</strong> VAR has made us replace about 2500 years of market experience with a covariance matrix that is still in its infancy. We made tabula rasa of years of market lore that was picked up from trader to trader and crammed everything into a covariance matrix. Why? So that a management consultant or an unemployed electrical engineer can understand financial market risks.</p>
-<p>To me, VAR is charlatanism because it tries to estimate something that is not scientifically possible to estimate, namely the risks or rare events. It gives people misleading precision that could lead to the build up of positions by hedgers. It lulls people to sleep. All that because there are financial stakes involved. To know the VAR, you need the probabilities of events. To get the probabilities right, you need to forecast volatility and correlations. I spent close to a decade and a half trying to guess volatility, the volatility of volatility, and correlations, and I sometimes shiver at the mere remembrance of my past miscalculations. Wounds from correlation matrices are still sore.</p>
-<p><strong>DS:</strong> Proponents of VAR will argue that it has its shortcomings but it’s better than what you had before.</p>
-<p><strong>NT:</strong> That’s completely wrong. It’s not better than what you had because you are relying on something with false confidence and running larger positions than you would have otherwise. You’re worse off relying on misleading information than on not having any information at all. If you give a pilot an altimeter that is sometimes defective, he will crash the plane. Give him nothing and he will look out the window. Technology is only safe if it is flawless.</p>
-<p>A lot of people reduce their anxiety when they see numbers. They want a triple digit delta or gamma, for example, not taking into account that it is foolish to be precise with deltas when you don’t even know the parameters.</p>
-<p>Before VAR, we looked at positions and understood them using what I call a non-parametric method. After VAR, all we see is numbers, numbers that depend on strong assumptions. I’d much rather see the details of the position itself rather than some numbers that are supposed to reflect its risks.</p>
-<p>Clearing firms understood that very well. Ironically, the stock market crash coincided with the discovery of this so-called parametric system used to run the risks of option traders. In the old days, the clearing firms looked at how many calls you were short and how many you were long, and if you sold a lot of calls, they would get nervous and call you up and ask you to liquidate some of them. After they went to parametric monitoring of option positions using second rate statistical methods, the options traders started building up massive short put positions that, along with portfolio insurance, helped to accelerate the crash. Now they’re coming back to square one with their non-parametric methods, particularly with the puts.</p>
-<p><strong>DS:</strong> Do you think the whole idea of trying to use statistics to model a particular distribution is fraudulent? Or is it possible to come up with something approximating the truth?</p>
-<p><strong>NT:</strong> The problem we have with statistics is that although we know something about distributions, we know very little about processes. A process is a distribution that has time in it and things change with time. People look at fat tails and say, “We can simulate distributions with fat tails.” But the reason distributions have fat tails may be because these distributions don’t have stable properties over time.</p>
-<p><strong>DS:</strong> VAR proponents will also admit that VAR doesn’t work as well on something with an asymmetric payoff…</p>
-<p><strong>NT:</strong> Yes, but any dynamic trading strategy by a leveraged investor that has a stop loss in it has an asymmetric payoff and needs to be treated like an option. If I trade Deutsche Mark or bond futures with a stop loss, the frequency of my losses will be greater than the frequency of my profits, but the magnitude of my losses will be smaller to compensate. It will look like a payoff of an option, and that’s not captured by VAR. The VAR assumes that traders are stuffed animals between two reports.</p>
-<p><strong>DS:</strong> Are you saying VAR can’t be used to measure risks on a trading desk?</p>
-<p><strong>NT:</strong> The risks of common events perhaps, those that do not matter, but not the risks of rare events. Moreover, traders will find the smallest crack in the VAR models and try to find a way to take the largest position they can while showing the smallest amount of risk. Traders have incentives to go the maximum bang because of the free option they’re granted.</p>
-<p><strong>DS:</strong> What free option is that?</p>
-<p><strong>NT:</strong> Most institutional traders don’t pay for their losses. If you make a dollar, you get paid ten cents. If you lose one dollar, you pay zero. That obviously looks like an option payoff. So let’s say your trader trades two bonds of slightly different maturities. They’re very close but because they have illusory close maturities the position will not produce a big VAR number. Sometimes they are treated as the same bond. The position, however, could easily bankrupt the company because of the sheer size that was built on it. An institution just last month lost bundles because a trader built up massive positions in Bunds against German swaps as their system, otherwise sophisticated, did not differentiate between them.</p>
-<p><strong>DS:</strong> What’s going to happen if everybody in the financial system starts using VAR?</p>
-<p><strong>NT:</strong> VAR players are all dynamic hedgers and need to revise their portfolios at different levels. As such, they can make very uncorrelated markets become very correlated. Those who refuse to learn from the portfolio insurance debacle do not belong to risk management.</p>
-<p>In 1993, hedge funds were long seemingly independent markets. The first margin call in the bonds led them to liquidate their positions in the Italian, French, and German bond markets. Markets therefore became correlated. Markets that were correlated became independent. VAR is a school for sitting ducks. Find me a dynamic hedger who is a reluctant liquidator and I will front-run him to near bankruptcy.</p>
-<p><strong>DS:</strong> So one problem with VAR models is that they don’t account for the fact that the market corrects for the models that trades are based on.</p>
-<p><strong>NT:</strong> Bingo. Even more: Our perception of what’s going on in the real world can hurt us simply because we have to realize that we are the major players ourselves and we act according to our perceptions. In physics, it’s called the Heisenberg uncertainty principle. In the social sciences, it’s even more pronounced.</p>
-<p>When people ask me what alternative to VAR I have to offer, my answer is: smaller leverage, less naive diversification, less reliance on dynamic hedging.</p>
-<p><strong>DS:</strong> Are all correlations suspect?</p>
-<p><strong>NT:</strong> You can find a relationship between any two items if you look hard enough. It will be entirely spurious and have no predictive power, but you will find one. To give you an idea, you’ll always find what we call data miners who will show you that there is a 100 percent correlation between his great aunt’s blood pressure and the back month Nikkei volatility. When you’re a trader, you get a lot of calls from folks who found relationships that can produce a 10 Sharpe ratio. That means it’s almost impossible to lose money on the trade. Sure enough, when you start trading, you realize that the relationship was not there. Trading has fewer biases than statistics.</p>
-<p><strong>DS:</strong> What are the most common mistakes you see traders and risk managers making?</p>
-<p><strong>NT:</strong> As a trader, my job is to understand biases and trade on them. There are all kinds of biases. The most common is the small sample bias. Let’s say you have 1 to 1000 odds you will come home every day with a dollar and once in a while you lose $1000. Many traders show very steady incomes but they could be fooling themselves because they don’t have a long enough period of time to chart their performance. Their Sharpe ratio will not be indicative. In option trading, there is a similar bias. Short premium option traders, typically those who sell out-of-the-money options, are more likely to make money on a daily basis and then blow up. Likewise, the yield hogs, those traders who would take any risk for a few basis points. You can fool yourself with your Sharpe ratios, and you can fool all of the financial engineers, but you can’t fool an old Chicago trader who went bankrupt twice.</p>
-<p>Another bias is what I call the size bias. If you have twenty thousand traders in the market, sure enough, you’ll have someone who’s been up every day for the past few years and will show you a beautiful P&amp;L. If you put enough monkeys on typewriters, one of the monkeys will write the Iliad in ancient Greek. But would you bet any money that he’s going to write the Odyssey next? You know that because of the sheer size of the sample, you’re likely to find a lucky monkey once in a while. But the same applies to traders.</p>
-<p>A third bias is the survival bias. Everybody will tell you that stock investing is a great idea because it’s been back-tested by some serious</p>
-<p>Guru and if you bought one share of some stock during the revolution you would have owned the GNP of some banana republic. But you forget that your back-testing is only on stocks that are alive today and did not cover stocks in imperial Russia that a rational investor would have bought at the beginning of the century. Many continental stocks were recycled into wallpaper. When you look at markets, you are only looking at the remnants, the parts that have survived. Or take real estate. People always say it goes up. But that works only if you always bought in places that became fancy.</p>
-<p><strong>DS:</strong> So essentially, you’d like to replace statistical valuation that’s at the center of most derivatives trading with valuation that’s more based on experience.</p>
-<p><strong>NT:</strong> You learn a lot about valuation from trading with other traders, by seeing what others give you and what they take away from you. What they give is generally worth less, and what they take is worth more. It’s sort of like cars that are lemons. When you buy a lemon, only the seller knows it’s a lemon. You need to drive it for a while to know it’s a lemon. It’s the same with options. You don’t know an option is a lemon, but you have to assume if someone is selling it to you, you have a high probability of it being a lemon. Very often you won’t know the option’s value until you actually manage it for a while. Some options hedge very well and some don’t.</p>
-<p><strong>DS:</strong> Can you give me an example?</p>
-<p><strong>DT:</strong> Sure, take upside calls on the S&amp;P. Retail investors tend to sell a lot of higher strike calls in equity markets and buy a lot of lower strike puts. You look at the distributions and you assume you’re being compensated with the volatility differential buying higher strike calls and selling lower strike puts. But once you start running it, you will notice that some undetectable behavior makes you lose money on the trade. And your back-testing cannot fully detect that.</p>
-<p>It’s more intricate than it seems. It’s not just the volatility of the upside or the downside, it’s the volatility around a particular strike that has a large open interest. We call these sticky strikes. The markets tend to compress in variation around these strikes. Good traders can sense that.</p>
-<p>Also, when you have a stock warrant on an illiquid stock, you need to take into account that your own hedging will reduce the volatility and stabilize the stock. That added to that of other dynamic hedgers.</p>
-<p><strong>DS:</strong> You left a job as the senior options trader at the Union Bank of Switzerland to go to Chicago and become a floor trader. Why did you leave Wall Street? What did you think you were missing by trading from a screen in New York?</p>
-<p><strong>NT:</strong> I left Wall St. for the first time in 1991. I was obsessed with price formation. I couldn’t understand from the screen how prices were determined. It took me six months to be able to read prices in the pit. Locals basically read information from the order flow and squeeze the weak party. There’s always a pack of five or six dominating locals who abruptly change the prices, who bid a lot higher than the previous offer and have the guts to do it and the rest of them follow.</p>
-<p><strong>DS:</strong> How did that knowledge change the way you trade when you went back to trading from a screen?</p>
-<p><strong>NT:</strong> It is the most enriching experience for a trader. I learned more about market dynamics in my second six months than from years on a desk. I learned that traders’ income is not the bid-offer spread, but the micro-squeezes that take place. Markets move from squeezes to squeezes. Traders make money on stop losses and other free options. It made me interested in information economics.</p>
-<p><strong>DS:</strong> You’re not ready to give up on all quantitative techniques. You were trained as a statistician. You don’t make wild speculative bets and I assume you try to hire traders who have some kind of quantitative skills.</p>
-<p><strong>NT:</strong> I have the following problem. Anytime I take a street-smart kid with a strong Brooklyn accent and train him or her in quant methods, I develop a wonderful quant trader who knows how to squeeze the sitting ducks. When you take extremely quantitative trainees, particularly from the physical sciences, and try to make them arbitrage traders, they freak out and become pure gamblers. They can’t see the edge and become the sitting ducks. The world has too much texture than they can squeeze into the framework they’re used to. I see a huge incidence of pure speculative gambling on the part of these folks who are hired on the strength of their knowledge of quantitative methods.</p>
-<p><strong>DS:</strong> How about risk managers? What do you look for in risk managers that you hire?</p>
-<p><strong>NT:</strong> I try to probe their minds to see what makes them tick. And I start quizzing them quite unfairly about market history. I ask them about what happened to the correlation between bonds and mortgages on the day when the stock market crashed. I quiz them about the gold rally in the early ’80s. I test to see if they intuitively understand squeezes. If they don’t show any interest in data, in any true market history, I stop the interview and send them home. To me, it is extremely dangerous to have in such positions people who only trust equations. You can’t get the edge if you just learn from your own mistakes. You need to learn from other people’s mistakes as well and these are public information.</p>
-<p><strong>DS:</strong> Where do you think research in the financial markets is heading? What’s valuable and what’s not?</p>
-<p><strong>NT:</strong> Financial economics has been extremely successful at melding the math with economic insight. This is providing traders with a better understanding of derivatives pricing. My motto is that the markets follow the path that hurts the highest number of dynamic hedgers. It was exciting to read a mathematical proof of it by Grossman and Zhou in the latest Journal of Finance. We are having less success with the frenetic financial engineering efforts, with a lot of mathematical acrobatics, but a hollow ring.</p>
-<p><a class="reference external" href="https://merage.uci.edu/~jorion/oc/ntaleb.htm">Source</a></p>
-</section>
-<section id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>It’s indeed fascinating that Taleb’s criticisms were written just before these pivotal events. His insights about the limitations and dangers of financial engineering were eerily prescient.</p>
-<ol class="arabic simple">
-<li><p><strong>Black-Scholes Nobel Prize (1997):</strong></p>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="literary-criticism-through-survival-analysis">
+<h1>Literary Criticism through Survival Analysis<a class="headerlink" href="#literary-criticism-through-survival-analysis" title="Permalink to this heading">#</a></h1>
+<section id="aim-1">
+<h2>Aim 1<a class="headerlink" href="#aim-1" title="Permalink to this heading">#</a></h2>
+<section id="biology">
+<h3>Biology<a class="headerlink" href="#biology" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>The awarding of the Nobel Prize to Black-Scholes for their options pricing model celebrated the triumph of financial engineering. However, Taleb’s critique highlights a significant flaw: the reliance on models that assume stable, predictable markets. Taleb argued that these models fail to account for extreme events and the real-world complexities of financial markets. The Nobel Prize validated an approach that Taleb considered fundamentally flawed in managing real-world risk.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(f(t)\)</span></strong> (Probability Density Function)</p>
+<ul>
+<li><p>Focus on incompletely observed processes.</p>
+<ul>
+<li><p>Exclude fantasy events that deviate more than <span class="math notranslate nohighlight">\(3\sigma\)</span> from the mean (<code class="docutils literal notranslate"><span class="pre">shock-value</span></code> events).</p></li>
+<li><p>Only include universally observable events.</p></li>
+<li><p>Include private hallucinations like Hamlet’s ghost, provided they lack agency and only influence the delusional individual’s actions.</p></li>
 </ul>
 </li>
-<li><p><strong>Russian Default and LTCM Collapse (1998):</strong></p>
-<ul class="simple">
-<li><p>Russia’s bond default shattered the assumption that sovereign bonds were risk-free, an assumption critical to many financial models, including those used by LTCM. Taleb’s warnings about the false precision of VAR and other models came true as LTCM’s sophisticated strategies, which relied heavily on mathematical models, failed spectacularly. The fund’s collapse was a dramatic example of the dangers of overfitting and the inability of models to predict rare but impactful events.</p></li>
+<li><p>Use a nonparametric approach to the survival function <span class="math notranslate nohighlight">\(S(t)\)</span>, avoiding <span class="math notranslate nohighlight">\(1 - F(t)\)</span>.</p></li>
 </ul>
 </li>
-</ol>
-<p>Taleb’s main arguments were proven correct by these events:</p>
-<ul class="simple">
-<li><p><strong>Overreliance on Models:</strong> He warned that financial models give a false sense of security. LTCM’s collapse showed that models couldn’t foresee or handle the chaos of real market conditions.</p></li>
-<li><p><strong>Underestimation of Rare Events:</strong> Taleb emphasized the significance of rare, high-impact events. The Russian default was a perfect example of an unpredictable event that models failed to account for, leading to massive losses.</p></li>
-<li><p><strong>Misleading Precision:</strong> He criticized VAR for providing misleading precision. The events of 1998 demonstrated how reliance on such models could lead to complacency and inadequate risk management.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(S(t)\)</span></strong> (Survival Function)</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(T&gt;t)\)</span>, representing the probability of survival past time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 </ul>
-<p>Taleb’s critique serves as a sobering reminder that while financial engineering can provide useful tools, it must be tempered with a deep understanding of market realities and the inherent unpredictability of financial systems. The Black-Scholes Nobel Prize and the LTCM debacle illustrate the gulf between theoretical models and real-world outcomes, vindicating Taleb’s skepticism about the efficacy of financial engineering in managing risk.</p>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(h(t)\)</span></strong> (Hazard Function)</p>
+<ul>
+<li><p>Encodes the entire risk profile.</p></li>
+<li><p><span class="math notranslate nohighlight">\(h(t)=\lambda=\frac{f(t)}{S(t)}\)</span>, representing the instantaneous risk at time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="collective">
+<h3>Collective<a class="headerlink" href="#collective" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(X\)</span></strong></p>
+<ul>
+<li><p>Represents various patterns of behavior known to humanity since the beginning of time.</p></li>
+<li><p>These factors influence the <code class="docutils literal notranslate"><span class="pre">time-to-event</span></code> of processes.</p></li>
+<li><p>Agency is expressed by altering the values (alleles) of these factors (genetic loci).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="decisions">
+<h3>Decisions<a class="headerlink" href="#decisions" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(\beta\)</span></strong> (Parameter Vector)</p>
+<ul>
+<li><p>Represents all the parameters or <code class="docutils literal notranslate"><span class="pre">gene</span> <span class="pre">loci</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(SV'\)</span></strong> (Scenario Vector)</p>
+<ul>
+<li><p>Think of these as <code class="docutils literal notranslate"><span class="pre">allelic</span> <span class="pre">variants</span></code>.</p></li>
+<li><p>Binary choices, decisions, and propensities.</p></li>
+<li><p>These affect the time-to-event and are decoded by the scenario vector.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="application-to-entourage">
+<h3>Application to “Entourage”<a class="headerlink" href="#application-to-entourage" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The show “Entourage” can be critiqued using this framework, where its recurring fantastical elements represent deviations from the general human experience, akin to events far outside the normal probability density function (<span class="math notranslate nohighlight">\(&gt;3\sigma\)</span> events).</p></li>
+<li><p>These fantastical elements, while entertaining, distort the realistic portrayal of life, similar to how high variance events (<span class="math notranslate nohighlight">\(&gt;3\sigma\)</span>) are excluded from certain biological models.</p></li>
+</ul>
+</section>
+<section id="comparison-to-game-of-thrones">
+<h3>Comparison to “Game of Thrones”<a class="headerlink" href="#comparison-to-game-of-thrones" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>“Game of Thrones” presents characters like Night Walkers, giants, and dragons—elements far beyond the <span class="math notranslate nohighlight">\(3\sigma\)</span> threshold. These fantastical elements challenge the rational human experience, offering a stark contrast to the narrative structure of “Entourage.”</p></li>
+</ul>
+<hr class="docutils" />
+<p>This structured approach allows for a nuanced critique of narrative elements, providing a clear framework to evaluate the realism and frequency of fantastical events within any literary work or show. By applying principles of survival analysis, you offer a fresh perspective on storytelling that emphasizes both the empirical and the imaginative aspects of narratives.</p>
+</section>
 </section>
 </section>
 
@@ -526,10 +541,20 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-world-according-to-nassim-taleb">The World According to Nassim Taleb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-strategy-what-problems-do-you-have-with-financial-engineering">Derivatives Strategy: What problems do you have with financial engineering?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Frailty</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#literary-criticism-through-survival-analysis">Literary Criticism through Survival Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-1">Aim 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biology">Biology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collective">Collective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decisions">Decisions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-entourage">Application to “Entourage”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-to-game-of-thrones">Comparison to “Game of Thrones”</a></li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
