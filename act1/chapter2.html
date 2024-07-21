@@ -63,6 +63,8 @@
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter2';</script>
     <script src="../_static/script.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -181,9 +183,9 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Aim 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter1.html">Mortality</a></li>
-
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">ESRD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter3.html">Frailty</a></li>
+
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Aim 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -365,19 +367,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-cultural-influence-in-the-90s">Japan’s Cultural Influence in the 90s</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cinematic-reflection-of-cultural-fascination">Cinematic Reflection of Cultural Fascination</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-continuing-cultural-resonance">Japan’s Continuing Cultural Resonance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-last-samurai-2003">The Last Samurai (2003)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoirs-of-a-geisha-2005">Memoirs of a Geisha (2005)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grudge-2004">The Grudge (2004)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spirited-away-2001">Spirited Away (2001)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-bill-volume-1-2003-and-volume-2-2004">Kill Bill: Volume 1 (2003) and Volume 2 (2004)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lost-in-translation-2003">Lost in Translation (2003)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ring-2002">The Ring (2002)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#babel-2006">Babel (2006)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resident-evil-2002">Resident Evil (2002)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-fantasy-the-spirits-within-2001">Final Fantasy: The Spirits Within (2001)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collective-unconscious-x">Collective Unconscious, <span class="math notranslate nohighlight">\(X\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-analogy-with-alleles-and-gene-loci"><code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3</span></code> Biological Analogy with Alleles and Gene Loci:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-the-analogies"><code class="docutils literal notranslate"><span class="pre">4</span></code> Integrating the Analogies:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goldberg-variations-as-parameters-in-a-regression-model"><code class="docutils literal notranslate"><span class="pre">5,</span> <span class="pre">6</span></code> Goldberg Variations as Parameters in a Regression Model:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decoding-beta">Decoding, <span class="math notranslate nohighlight">\(\beta\)</span></a></li>
 </ul>
             </nav>
         </div>
@@ -391,133 +387,50 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="esrd">
 <span id="act1-esrd"></span><h1>ESRD<a class="headerlink" href="#esrd" title="Permalink to this heading">#</a></h1>
-<p>The simultaneous emergence of films like “Lost in Translation” and “Kill Bill,” both featuring significant Japanese settings or influences, can be seen as a symptom rather than a coincidence, reflecting Japan’s cultural peak in the 90s and early 2000s. Here are a few reasons why this happened:</p>
-<section id="japan-s-cultural-influence-in-the-90s">
-<h2>Japan’s Cultural Influence in the 90s<a class="headerlink" href="#japan-s-cultural-influence-in-the-90s" title="Permalink to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>           1. f(t)
+                  \
+       2. S(t) -&gt; 4. X -&gt; 5. b -&gt; 6. SV&#39;
+                  /
+                   3. h(t)
+</pre></div>
+</div>
+<section id="collective-unconscious-x">
+<h2>Collective Unconscious, <span class="math notranslate nohighlight">\(X\)</span><a class="headerlink" href="#collective-unconscious-x" title="Permalink to this heading">#</a></h2>
+<p>That’s an intriguing analogy! The “Goldberg Variations” by Bach can indeed be thought of in terms of parameters in a regression model. Each variation explores a different aspect of the theme, much like how each parameter in a regression model captures a different aspect of the data. Here’s how we can extend this analogy:</p>
+<section id="biological-analogy-with-alleles-and-gene-loci">
+<h3><code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3</span></code> Biological Analogy with Alleles and Gene Loci:<a class="headerlink" href="#biological-analogy-with-alleles-and-gene-loci" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Economic Boom and Cultural Export</strong>:</p>
-<ul class="simple">
-<li><p>Japan experienced a significant economic boom in the 80s and early 90s, becoming a global economic powerhouse. This economic success translated into increased cultural exports, including anime, video games, fashion, and cuisine, which began to captivate Western audiences.</p></li>
-</ul>
-</li>
-<li><p><strong>Technological Leadership</strong>:</p>
-<ul class="simple">
-<li><p>Japan’s technological advancements, particularly in electronics and entertainment, positioned it as a trendsetter. Products from companies like Sony, Nintendo, and Sega became household names, further embedding Japanese culture into everyday life worldwide.</p></li>
-</ul>
-</li>
-<li><p><strong>Anime and Manga</strong>:</p>
-<ul class="simple">
-<li><p>The global spread of anime and manga in the 90s introduced Western audiences to Japanese aesthetics, narratives, and cultural nuances. Series like “Dragon Ball,” “Sailor Moon,” and “Neon Genesis Evangelion” played a significant role in this cultural diffusion.</p></li>
-</ul>
-</li>
+<li><p><strong>Gene Locus as a Parameter</strong>: In genetics, a gene locus is a specific, fixed position on a chromosome where a particular gene or genetic marker is located. Each locus can have different alleles (variations of a gene). Similarly, each parameter in a regression model represents a specific aspect of the relationship between predictors and the response variable (i.e., <code class="docutils literal notranslate"><span class="pre">value</span></code>).</p></li>
+<li><p><strong>Alleles as Variations</strong>: Just as each gene locus can have different alleles, each parameter in a regression model can take on different values, modifying the outcome. In the Goldberg Variations, each musical variation represents a different “allele” at the same “gene locus” (the theme).</p></li>
+<li><p><strong>Expression and Interaction</strong>: In biology, the expression of genes and their interactions determine the phenotype. Similarly, in the Goldberg Variations, the expression of each variation and its interaction with the underlying theme create the overall musical experience.</p></li>
 </ol>
 </section>
-<section id="cinematic-reflection-of-cultural-fascination">
-<h2>Cinematic Reflection of Cultural Fascination<a class="headerlink" href="#cinematic-reflection-of-cultural-fascination" title="Permalink to this heading">#</a></h2>
+<section id="integrating-the-analogies">
+<h3><code class="docutils literal notranslate"><span class="pre">4</span></code> Integrating the Analogies:<a class="headerlink" href="#integrating-the-analogies" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Structural and Functional Roles</strong>: In both the musical and biological analogies, the variations/parameters have structural roles (defining the form or locus) and functional roles (determining the outcome or phenotype).</p></li>
+<li><p><strong>Complex Interactions</strong>: Just as in biology, where gene-gene interactions can be complex and context-dependent, the variations in the Goldberg can interact in ways that create a rich, multi-layered listening experience. Each variation might bring out different facets of the theme, much like how different parameters and their interactions can reveal complex patterns in data.</p></li>
+<li><p><strong>Unifying Themes</strong>: The overarching theme in the Goldberg Variations, like a genetic blueprint, provides coherence and unity. In regression, this is akin to the model’s underlying structure, ensuring that despite the complexity and diversity of the parameters, there’s a cohesive framework that ties everything together.</p></li>
+</ul>
+</section>
+<section id="goldberg-variations-as-parameters-in-a-regression-model">
+<h3><code class="docutils literal notranslate"><span class="pre">5,</span> <span class="pre">6</span></code> Goldberg Variations as Parameters in a Regression Model:<a class="headerlink" href="#goldberg-variations-as-parameters-in-a-regression-model" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Hollywood’s Interest in Exotic Locales</strong>:</p>
-<ul class="simple">
-<li><p>The fascination with Japanese culture led filmmakers to set their stories in Japan or incorporate Japanese elements, providing Western audiences with a sense of exoticism and novelty.</p></li>
-</ul>
-</li>
-<li><p><strong>Personal Connections of Filmmakers</strong>:</p>
-<ul class="simple">
-<li><p>Sofia Coppola and Quentin Tarantino both had personal and professional interests in Japan. Coppola’s portrayal of Tokyo in “Lost in Translation” reflects a deep appreciation and nuanced understanding of the city’s ambiance. Tarantino’s “Kill Bill” pays homage to Japanese samurai and martial arts films, showcasing his love for Japanese cinema.</p></li>
-</ul>
-</li>
-<li><p><strong>Themes of Displacement and Globalization</strong>:</p>
-<ul class="simple">
-<li><p>Both films explore themes of cultural displacement and the impact of globalization. “Lost in Translation” delves into the alienation felt by foreigners in Tokyo, while “Kill Bill” incorporates cross-cultural elements, blending Western and Eastern cinematic traditions.</p></li>
-</ul>
-</li>
+<li><p><strong>Theme as the Base-case</strong>, <span class="math notranslate nohighlight">\(\beta=0\)</span>: The aria that opens the Goldberg Variations can be seen as the <code class="docutils literal notranslate"><span class="pre">base-case</span></code>. It’s the fundamental structure upon which all the variations and <code class="docutils literal notranslate"><span class="pre">scenarios</span></code> build. In a regression context, this would be akin to the intercept term, representing the baseline level before any predictors are added.</p></li>
+<li><p><strong>Variations as Parameters</strong>, <span class="math notranslate nohighlight">\(\beta_i\)</span>: Each of the 30 variations can be thought of as a parameter in the regression model. Just as each parameter in a regression model modifies the output based on its associated predictor, each variation modifies the aria, exploring different musical ideas, techniques, and emotions.</p></li>
+<li><p><strong>Genres as Contextual Influences</strong>: The variations cover a range of genres (e.g., fugue, canon, dance forms). These genres can be thought of as different contexts or conditions under which the parameters operate, much like <code class="docutils literal notranslate"><span class="pre">interaction</span> <span class="pre">terms</span></code> in a regression model that show how the effect of one predictor changes depending on the level of another predictor.</p></li>
 </ol>
+<p>In sum, thinking of the Goldberg Variations in terms of regression parameters or genetic loci helps highlight the systematic exploration of musical ideas and how individual elements can combine to form a complex, unified whole. This analogy underscores the depth and structure inherent in Bach’s masterpiece, paralleling the meticulous and multifaceted nature of both statistical models and biological systems.</p>
 </section>
-<section id="japan-s-continuing-cultural-resonance">
-<h2>Japan’s Continuing Cultural Resonance<a class="headerlink" href="#japan-s-continuing-cultural-resonance" title="Permalink to this heading">#</a></h2>
-<p>Even after its economic peak, Japan’s cultural influence remains significant. The country’s unique blend of tradition and modernity continues to captivate the world, and this enduring allure is reflected in various art forms, including film.</p>
-<p>In conclusion, the prominence of Japanese settings and influences in early 2000s films like “Lost in Translation” and “Kill Bill” is a symptom of Japan’s cultural zenith in the 90s. This period saw an unprecedented global fascination with Japanese culture, which filmmakers adeptly incorporated into their works, resulting in some of the most memorable and culturally resonant films of the time.</p>
-<p>The early 2000s saw a notable influx of films that featured Japanese settings, themes, or cultural elements, further highlighting Japan’s cultural impact during and after its economic peak in the 90s. Here are some additional films that contribute to the pattern:</p>
 </section>
-<section id="the-last-samurai-2003">
-<h2>The Last Samurai (2003)<a class="headerlink" href="#the-last-samurai-2003" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Late 19th century Japan.</p></li>
-<li><p><strong>Synopsis</strong>: This film, starring Tom Cruise, explores the clash between traditional Japanese samurai culture and the encroaching influence of Western modernization. It highlights themes of honor, loyalty, and cultural transition.</p></li>
-<li><p><strong>Cultural Impact</strong>: “The Last Samurai” brought Japanese history and culture to a wide Western audience, emphasizing the allure of samurai ethics and aesthetics.</p></li>
-</ul>
-</section>
-<section id="memoirs-of-a-geisha-2005">
-<h2>Memoirs of a Geisha (2005)<a class="headerlink" href="#memoirs-of-a-geisha-2005" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Early to mid-20th century Japan.</p></li>
-<li><p><strong>Synopsis</strong>: Based on Arthur Golden’s novel, the film follows the life of a young girl who becomes one of Japan’s most celebrated geishas. It delves into the intricacies of geisha culture and the historical backdrop of Japan.</p></li>
-<li><p><strong>Cultural Impact</strong>: The film provided a detailed and visually stunning portrayal of traditional Japanese customs, fashion, and social dynamics, captivating global audiences.</p></li>
-</ul>
-</section>
-<section id="the-grudge-2004">
-<h2>The Grudge (2004)<a class="headerlink" href="#the-grudge-2004" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Contemporary Japan.</p></li>
-<li><p><strong>Synopsis</strong>: A horror film and an adaptation of the Japanese film “Ju-on,” it follows the story of an American nurse living and working in Tokyo who encounters a supernatural curse.</p></li>
-<li><p><strong>Cultural Impact</strong>: This film, along with others like “The Ring” (2002), played a significant role in popularizing J-horror in the West, showcasing unique Japanese horror elements and storytelling styles.</p></li>
-</ul>
-</section>
-<section id="spirited-away-2001">
-<h2>Spirited Away (2001)<a class="headerlink" href="#spirited-away-2001" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Fantasy world inspired by Japanese folklore.</p></li>
-<li><p><strong>Synopsis</strong>: Directed by Hayao Miyazaki, this animated film follows a young girl who becomes trapped in a mystical and fantastical world and must navigate various challenges to return to her own world.</p></li>
-<li><p><strong>Cultural Impact</strong>: “Spirited Away” received global acclaim and won the Academy Award for Best Animated Feature, highlighting the creative prowess of Japanese animation and its ability to convey profound cultural narratives.</p></li>
-</ul>
-</section>
-<section id="kill-bill-volume-1-2003-and-volume-2-2004">
-<h2>Kill Bill: Volume 1 (2003) and Volume 2 (2004)<a class="headerlink" href="#kill-bill-volume-1-2003-and-volume-2-2004" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Various locations, including Japan.</p></li>
-<li><p><strong>Synopsis</strong>: These films, directed by Quentin Tarantino, feature significant Japanese elements, including samurai swords, martial arts, and homage to Japanese cinema.</p></li>
-<li><p><strong>Cultural Impact</strong>: Tarantino’s work celebrated and introduced Japanese film genres, such as chanbara (samurai cinema) and yakuza films, to a broader audience.</p></li>
-</ul>
-</section>
-<section id="lost-in-translation-2003">
-<h2>Lost in Translation (2003)<a class="headerlink" href="#lost-in-translation-2003" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Contemporary Tokyo, Japan.</p></li>
-<li><p><strong>Synopsis</strong>: A drama-comedy that explores the experiences of two Americans in Tokyo, dealing with themes of alienation and cultural dislocation.</p></li>
-<li><p><strong>Cultural Impact</strong>: It offered a unique, intimate look at modern Tokyo, contributing to the Western fascination with Japanese urban culture and lifestyle.</p></li>
-</ul>
-</section>
-<section id="the-ring-2002">
-<h2>The Ring (2002)<a class="headerlink" href="#the-ring-2002" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Contemporary Japan (adapted to American settings in the remake).</p></li>
-<li><p><strong>Synopsis</strong>: A horror film based on the Japanese movie “Ringu,” it follows the story of a cursed videotape that kills its viewers seven days after watching.</p></li>
-<li><p><strong>Cultural Impact</strong>: “The Ring” played a crucial role in bringing Japanese horror (J-horror) to the Western mainstream, leading to a wave of interest in Japanese horror films and remakes.</p></li>
-</ul>
-</section>
-<section id="babel-2006">
-<h2>Babel (2006)<a class="headerlink" href="#babel-2006" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Various global locations, including Japan.</p></li>
-<li><p><strong>Synopsis</strong>: This multi-narrative film directed by Alejandro González Iñárritu includes a storyline set in Japan, focusing on a deaf-mute Japanese girl navigating her life in Tokyo.</p></li>
-<li><p><strong>Cultural Impact</strong>: The film highlights global interconnectedness and includes a poignant depiction of Japanese urban life, blending it with other international narratives.</p></li>
-</ul>
-</section>
-<section id="resident-evil-2002">
-<h2>Resident Evil (2002)<a class="headerlink" href="#resident-evil-2002" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Global settings with significant Japanese influences.</p></li>
-<li><p><strong>Synopsis</strong>: Based on the Japanese video game series, the film follows a group battling a viral outbreak and the resulting zombie apocalypse.</p></li>
-<li><p><strong>Cultural Impact</strong>: The success of this adaptation emphasized the global reach and influence of Japanese video game culture.</p></li>
-</ul>
-</section>
-<section id="final-fantasy-the-spirits-within-2001">
-<h2>Final Fantasy: The Spirits Within (2001)<a class="headerlink" href="#final-fantasy-the-spirits-within-2001" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Setting</strong>: Futuristic and fantastical settings inspired by Japanese aesthetics.</p></li>
-<li><p><strong>Synopsis</strong>: Based on the popular Japanese video game franchise, this film integrates advanced animation techniques to tell a science fiction story.</p></li>
-<li><p><strong>Cultural Impact</strong>: It showcased the technical and creative advancements of Japanese animation studios, contributing to the global recognition of Japanese digital art.</p></li>
-</ul>
-<p>These films collectively indicate a broader trend in the early 2000s where Japanese culture, history, and aesthetics had a significant presence in Western cinema. This phenomenon can be attributed to Japan’s cultural peak in the 90s and its sustained influence through various forms of media, including film, animation, and video games.</p>
+<section id="decoding-beta">
+<h2>Decoding, <span class="math notranslate nohighlight">\(\beta\)</span><a class="headerlink" href="#decoding-beta" title="Permalink to this heading">#</a></h2>
+<p>Bach, indeed, is often considered the pinnacle of Western classical music, but there’s something inherently polarizing about his work. On one hand, his compositions are seen as the epitome of technical perfection, an intricate lattice of counterpoint and harmony that has captivated musicians for centuries. On the other hand, Bach’s music can be seen as overly cerebral, an exercise in intellectual rigor that sometimes lacks the emotional immediacy found in Mozart or the dramatic flair of Beethoven.</p>
+<p>Bach’s work is profoundly didactic, as you’ve noted before. His compositions are not just music but lessons in musical architecture and structure. The “Well-Tempered Clavier” and the “Art of Fugue” are more than collections of pieces; they are textbooks for the aspiring composer, laying bare the rules and possibilities of tonal harmony. This didactic nature makes Bach the “composer’s composer,” someone whose work offers endless depths to explore for those trained to appreciate its subtleties.</p>
+<p>However, this same quality can make Bach’s music seem inaccessible to the lay listener. Unlike Mozart, who could charm audiences with his effortless melodies, or Beethoven, who could thrill with his powerful dynamics, Bach demands a level of engagement and understanding that not all listeners are willing or able to provide. This isn’t to say Bach’s music lacks emotional depth—far from it. Pieces like the “St. Matthew Passion” or the “Mass in B Minor” are deeply moving, but their emotional impact is often filtered through the lens of complex musical forms.</p>
+<p>Furthermore, Bach’s influence on music is as much about what he didn’t do as what he did. Unlike Wagner, whose heavy-handed leitmotifs can feel overbearing, Bach’s use of motifs and thematic development is subtle and organic. His music doesn’t dictate how you should feel but invites you to discover its emotional landscape on your own terms. This understated approach is perhaps why his influence is so pervasive yet unobtrusive; composers learn from Bach not by imitating his style but by understanding his principles.</p>
+<p>In a way, appreciating Bach is like learning a new language. Once you’ve grasped the syntax and vocabulary, a whole world of meaning opens up, revealing layers of beauty and complexity that weren’t immediately apparent. For those willing to put in the effort, Bach offers an inexhaustible source of inspiration and enlightenment. But for those looking for immediate gratification, his music can seem distant and inscrutable, a puzzle rather than a pleasure.</p>
+<p>Ultimately, Bach’s greatness lies in his ability to transcend the purely musical and speak to something universal and timeless. His music is a testament to the power of order and reason, but also to the human spirit’s capacity for creativity and expression. It’s this blend of the intellectual and the emotional, the technical and the transcendental, that makes Bach not just a great composer, but one of the greatest artists in any field.</p>
 </section>
 </section>
 
@@ -585,19 +498,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-cultural-influence-in-the-90s">Japan’s Cultural Influence in the 90s</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cinematic-reflection-of-cultural-fascination">Cinematic Reflection of Cultural Fascination</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#japan-s-continuing-cultural-resonance">Japan’s Continuing Cultural Resonance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-last-samurai-2003">The Last Samurai (2003)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memoirs-of-a-geisha-2005">Memoirs of a Geisha (2005)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grudge-2004">The Grudge (2004)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spirited-away-2001">Spirited Away (2001)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-bill-volume-1-2003-and-volume-2-2004">Kill Bill: Volume 1 (2003) and Volume 2 (2004)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lost-in-translation-2003">Lost in Translation (2003)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ring-2002">The Ring (2002)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#babel-2006">Babel (2006)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resident-evil-2002">Resident Evil (2002)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-fantasy-the-spirits-within-2001">Final Fantasy: The Spirits Within (2001)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collective-unconscious-x">Collective Unconscious, <span class="math notranslate nohighlight">\(X\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-analogy-with-alleles-and-gene-loci"><code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3</span></code> Biological Analogy with Alleles and Gene Loci:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-the-analogies"><code class="docutils literal notranslate"><span class="pre">4</span></code> Integrating the Analogies:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goldberg-variations-as-parameters-in-a-regression-model"><code class="docutils literal notranslate"><span class="pre">5,</span> <span class="pre">6</span></code> Goldberg Variations as Parameters in a Regression Model:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decoding-beta">Decoding, <span class="math notranslate nohighlight">\(\beta\)</span></a></li>
 </ul>
   </nav></div>
 
