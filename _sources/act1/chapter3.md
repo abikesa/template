@@ -8,15 +8,15 @@
                         3. h(t)
 
 
-## Linear/`Biology` 1, 2, 3
+## Time 1, 2, 3
 - Chaos: Time-to-event (grief, love)
 - Frenzy: No broken vow to duty or calling
 - Emotion: Instantaneous likelihood of breaking oath
 
-## Categories/`Archetypes` 4
+## Archetypes 4
 - Dionysian: stories: arcs (n) x values: honor-duty $(p)$ design matrix
 
-## Identity/*`Sui Generis`* 5, 6
+## Precision 5, 6
 - Algorithm defining `weights` of values or $(p)$ in relation to our fate and `destiny`
 - Binary: if an archetype is theme, you are one of the unique variations; no two people are identical
 
