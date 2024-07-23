@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Hierarchical &#8212; Template</title>
+    <title>Aim 2 &#8212; Template</title>
   
   
   
@@ -187,7 +187,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../act1/chapter3.html">Frailty</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Hierarchical</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Aim 2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="chapter1.html">Hospitalization</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="chapter2.html">Length of Stay</a></li>
@@ -387,7 +387,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Hierarchical</h1>
+    <h1>Aim 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,13 +397,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-representation">Mathematical Representation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-frailty-distributions">Common Frailty Distributions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits">Benefits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical-longitudinal">Hierarchical &amp; longitudinal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-representation">Mathematical Representation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-frailty-distributions">Common Frailty Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits">Benefits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -415,26 +418,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="hierarchical">
-<h1>Hierarchical<a class="headerlink" href="#hierarchical" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="aim-2">
+<h1>Aim 2<a class="headerlink" href="#aim-2" title="Permalink to this heading">#</a></h1>
+<section id="hierarchical-longitudinal">
+<h2>Hierarchical &amp; longitudinal<a class="headerlink" href="#hierarchical-longitudinal" title="Permalink to this heading">#</a></h2>
 <p>A frailty function in survival analysis is a random effect model used to account for unobserved heterogeneity or random variation in the survival times of individuals within a study. It introduces an additional random component to the hazard function to capture the influence of latent, unmeasured factors that might affect the risk of an event (such as death, failure, or recurrence).</p>
 <p>Here’s a breakdown of its key aspects:</p>
 <section id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Frailty</strong>: Represents unobserved random effects that lead to variations in the hazard function among individuals or groups.</p></li>
 <li><p><strong>Frailty Function</strong>: A function that incorporates these unobserved random effects into the hazard function of a survival model.</p></li>
 </ul>
 </section>
 <section id="purpose">
-<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h2>
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Unobserved Heterogeneity</strong>: Accounts for individual differences not captured by observed covariates.</p></li>
 <li><p><strong>Clustered Data</strong>: Useful for modeling survival data with a hierarchical structure (e.g., patients within hospitals, litters of animals).</p></li>
 </ul>
 </section>
 <section id="mathematical-representation">
-<h2>Mathematical Representation<a class="headerlink" href="#mathematical-representation" title="Permalink to this heading">#</a></h2>
+<h3>Mathematical Representation<a class="headerlink" href="#mathematical-representation" title="Permalink to this heading">#</a></h3>
 <p>The hazard function with frailty is usually expressed as:
 <span class="math notranslate nohighlight">\( h_i(t | Z_i) = Z_i h_0(t) \exp(X_i\beta) \)</span>
 where:</p>
@@ -447,7 +452,7 @@ where:</p>
 </ul>
 </section>
 <section id="common-frailty-distributions">
-<h2>Common Frailty Distributions<a class="headerlink" href="#common-frailty-distributions" title="Permalink to this heading">#</a></h2>
+<h3>Common Frailty Distributions<a class="headerlink" href="#common-frailty-distributions" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Gamma Distribution</strong>: Most commonly used due to its mathematical tractability.</p></li>
 <li><p><strong>Log-normal Distribution</strong>: Used when the frailty is believed to have a more complex, asymmetric distribution.</p></li>
@@ -455,26 +460,27 @@ where:</p>
 </ol>
 </section>
 <section id="applications">
-<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">#</a></h2>
+<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Medical Research</strong>: Modeling patient survival times where individual patient differences are not fully captured by observed variables.</p></li>
 <li><p><strong>Reliability Engineering</strong>: Analyzing the time to failure of components with unobserved heterogeneity.</p></li>
 </ul>
 </section>
 <section id="benefits">
-<h2>Benefits<a class="headerlink" href="#benefits" title="Permalink to this heading">#</a></h2>
+<h3>Benefits<a class="headerlink" href="#benefits" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Improved Estimates</strong>: By accounting for unobserved heterogeneity, frailty models can provide more accurate parameter estimates.</p></li>
 <li><p><strong>Model Fit</strong>: Better fit to data where unmeasured variables play a significant role in the hazard rate.</p></li>
 </ul>
 </section>
 <section id="challenges">
-<h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this heading">#</a></h2>
+<h3>Challenges<a class="headerlink" href="#challenges" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Complexity</strong>: Introducing frailty increases model complexity and can complicate parameter estimation.</p></li>
 <li><p><strong>Interpretation</strong>: Interpretation of frailty models can be less straightforward compared to standard Cox models.</p></li>
 </ul>
 <p>In summary, frailty functions are powerful tools in survival analysis to address unobserved heterogeneity and provide more accurate and realistic models for time-to-event data.</p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -544,13 +550,16 @@ where:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-representation">Mathematical Representation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-frailty-distributions">Common Frailty Distributions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits">Benefits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical-longitudinal">Hierarchical &amp; longitudinal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-representation">Mathematical Representation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-frailty-distributions">Common Frailty Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits">Benefits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
