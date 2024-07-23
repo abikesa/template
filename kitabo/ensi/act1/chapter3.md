@@ -17,11 +17,11 @@
 - Dionysian: stories: arcs (n) x values: honor-duty (p) design matrix
 
 ## 5, 6
-- Algorithm defining relative importance of values in relation to out fate and destiny
-- Binary: you either belong to this or that archetype, hero, villain, coward, enabler
+- Algorithm defining relative importance of values in relation to our fate and `destiny`
+- Binary: you either belong to this or that archetype; hero-villain, coward-enabler, etc
 
               1. Failure
                         \
-             2. Duty -> 4. Destiny:Turning-Points;Collective -> 5. Weights -> 6. Archetypes
+             2. Duty -> 4. Outcome:Turning-Points;Collective -> 5. Weights -> 6. Archetypes
                         /
                         3. Landscape
