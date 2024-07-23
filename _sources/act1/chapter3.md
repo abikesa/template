@@ -16,7 +16,7 @@
 ## Categories/`Archetypes` 4
 - Dionysian: stories: arcs (n) x values: honor-duty (p) design matrix
 
-## Identity/`*Sui Generis*` 5, 6
+## Identity/*`Sui Generis`* 5, 6
 - Algorithm defining relative importance of values in relation to our fate and `destiny`
 - Binary: if an archetype is theme, you are one of the unique variations; no two people are identical
 
