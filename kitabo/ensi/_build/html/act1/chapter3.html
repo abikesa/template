@@ -63,8 +63,6 @@
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter3';</script>
     <script src="../_static/script.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -185,7 +183,6 @@
 <li class="toctree-l2"><a class="reference internal" href="chapter1.html">Mortality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter2.html">ESRD</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Frailty</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Aim 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -367,20 +364,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Frailty</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#literary-criticism-through-survival-analysis">Literary Criticism through Survival Analysis</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-1">Aim 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biology">Biology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collective">Collective</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decisions">Decisions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-entourage">Application to “Entourage”</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-to-game-of-thrones">Comparison to “Game of Thrones”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1, 2, 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5, 6</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -393,87 +380,41 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="frailty">
 <span id="act1-frail"></span><h1>Frailty<a class="headerlink" href="#frailty" title="Permalink to this heading">#</a></h1>
-<p>Your approach to literary criticism through the lens of survival analysis is both innovative and compelling. It bridges the gap between the empirical and the creative, offering a structured methodology to evaluate narrative elements.</p>
-<p>Here’s a refined version of your outline:</p>
-</section>
-<hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="literary-criticism-through-survival-analysis">
-<h1>Literary Criticism through Survival Analysis<a class="headerlink" href="#literary-criticism-through-survival-analysis" title="Permalink to this heading">#</a></h1>
-<section id="aim-1">
-<h2>Aim 1<a class="headerlink" href="#aim-1" title="Permalink to this heading">#</a></h2>
-<section id="biology">
-<h3>Biology<a class="headerlink" href="#biology" title="Permalink to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>              1. f(t)
+                    \
+         2. S(t) -&gt; 4. y:h&#39;(f)=0; t(X&#39;X)X&#39;Y -&gt; 5. b -&gt; 6. SV&#39;
+                    /
+                    3. h(t)
+</pre></div>
+</div>
+<section id="id1">
+<h2>1, 2, 3<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong><span class="math notranslate nohighlight">\(f(t)\)</span></strong> (Probability Density Function)</p>
-<ul>
-<li><p>Focus on incompletely observed processes.</p>
-<ul>
-<li><p>Exclude fantasy events that deviate more than <span class="math notranslate nohighlight">\(3\sigma\)</span> from the mean (<code class="docutils literal notranslate"><span class="pre">shock-value</span></code> events).</p></li>
-<li><p>Only include universally observable events.</p></li>
-<li><p>Include private hallucinations like Hamlet’s ghost, provided they lack agency and only influence the delusional individual’s actions.</p></li>
-</ul>
-</li>
-<li><p>Use a nonparametric approach to the survival function <span class="math notranslate nohighlight">\(S(t)\)</span>, avoiding <span class="math notranslate nohighlight">\(1 - F(t)\)</span>.</p></li>
-</ul>
-</li>
-<li><p><strong><span class="math notranslate nohighlight">\(S(t)\)</span></strong> (Survival Function)</p>
-<ul>
-<li><p><span class="math notranslate nohighlight">\(P(T&gt;t)\)</span>, representing the probability of survival past time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
-</ul>
-</li>
-<li><p><strong><span class="math notranslate nohighlight">\(h(t)\)</span></strong> (Hazard Function)</p>
-<ul>
-<li><p>Encodes the entire risk profile.</p></li>
-<li><p><span class="math notranslate nohighlight">\(h(t)=\lambda=\frac{f(t)}{S(t)}\)</span>, representing the instantaneous risk at time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
-</ul>
-</li>
+<li><p>Chaos: Time-to-event (grief, love)</p></li>
+<li><p>Frenzy: No broken vow to duty or calling</p></li>
+<li><p>Emotion: Instantaneous likelihood of breaking oath</p></li>
 </ul>
 </section>
-<section id="collective">
-<h3>Collective<a class="headerlink" href="#collective" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h2>4<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong><span class="math notranslate nohighlight">\(X\)</span></strong></p>
-<ul>
-<li><p>Represents various patterns of behavior known to humanity since the beginning of time.</p></li>
-<li><p>These factors influence the <code class="docutils literal notranslate"><span class="pre">time-to-event</span></code> of processes.</p></li>
-<li><p>Agency is expressed by altering the values (alleles) of these factors (genetic loci).</p></li>
+<li><p>Dionysian: stories: arcs (n) x values: honor-duty (p) design matrix</p></li>
 </ul>
+</section>
+<section id="id3">
+<h2>5, 6<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>Algorithm defining relative importance of values in relation to out fate and destiny</p></li>
+<li><p>Binary: you either belong to this or that archetype, hero, villain, coward, enabler</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        1. Failure
+                  \
+       2. Duty -&gt; 4. Destiny:Turning-Points;Collective -&gt; 5. Weights -&gt; 6. Archetypes
+                  /
+                  3. Landscape
+</pre></div>
+</div>
 </li>
 </ul>
-</section>
-<section id="decisions">
-<h3>Decisions<a class="headerlink" href="#decisions" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong><span class="math notranslate nohighlight">\(\beta\)</span></strong> (Parameter Vector)</p>
-<ul>
-<li><p>Represents all the parameters or <code class="docutils literal notranslate"><span class="pre">gene</span> <span class="pre">loci</span></code>.</p></li>
-</ul>
-</li>
-<li><p><strong><span class="math notranslate nohighlight">\(SV'\)</span></strong> (Scenario Vector)</p>
-<ul>
-<li><p>Think of these as <code class="docutils literal notranslate"><span class="pre">allelic</span> <span class="pre">variants</span></code>.</p></li>
-<li><p>Binary choices, decisions, and propensities.</p></li>
-<li><p>These affect the time-to-event and are decoded by the scenario vector.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="application-to-entourage">
-<h3>Application to “Entourage”<a class="headerlink" href="#application-to-entourage" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>The show “Entourage” can be critiqued using this framework, where its recurring fantastical elements represent deviations from the general human experience, akin to events far outside the normal probability density function (<span class="math notranslate nohighlight">\(&gt;3\sigma\)</span> events).</p></li>
-<li><p>These fantastical elements, while entertaining, distort the realistic portrayal of life, similar to how high variance events (<span class="math notranslate nohighlight">\(&gt;3\sigma\)</span>) are excluded from certain biological models.</p></li>
-</ul>
-</section>
-<section id="comparison-to-game-of-thrones">
-<h3>Comparison to “Game of Thrones”<a class="headerlink" href="#comparison-to-game-of-thrones" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>“Game of Thrones” presents characters like Night Walkers, giants, and dragons—elements far beyond the <span class="math notranslate nohighlight">\(3\sigma\)</span> threshold. These fantastical elements challenge the rational human experience, offering a stark contrast to the narrative structure of “Entourage.”</p></li>
-</ul>
-<hr class="docutils" />
-<p>This structured approach allows for a nuanced critique of narrative elements, providing a clear framework to evaluate the realism and frequency of fantastical events within any literary work or show. By applying principles of survival analysis, you offer a fresh perspective on storytelling that emphasizes both the empirical and the imaginative aspects of narratives.</p>
-</section>
 </section>
 </section>
 
@@ -541,20 +482,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Frailty</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#literary-criticism-through-survival-analysis">Literary Criticism through Survival Analysis</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-1">Aim 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biology">Biology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collective">Collective</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decisions">Decisions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-entourage">Application to “Entourage”</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-to-game-of-thrones">Comparison to “Game of Thrones”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1, 2, 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5, 6</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

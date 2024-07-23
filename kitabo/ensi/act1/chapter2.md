@@ -23,3 +23,5 @@ The phrase "throw a bone to chew on" typically means giving someone something to
 - **Workplace morale**: In the context of employee management, the phrase can highlight a tension between short-term appeasement and long-term satisfaction. Small perks might boost morale temporarily, but they need to be part of a broader strategy for employee engagement and well-being. Otherwise, they might be seen as token gestures that don't address underlying issues.
 
 Ultimately, the effectiveness and ethical implications of "throwing a bone to chew on" depend on the context and the intentions behind the gesture. In all cases, it's crucial to consider whether the action genuinely addresses the needs and concerns of those involved or if it's merely a superficial tactic.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FqwLsSqWIBU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
