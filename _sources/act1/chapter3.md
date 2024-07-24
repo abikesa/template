@@ -22,6 +22,6 @@
 
               1. Failure
                         \
-             2. Duty -> 4. Outcome:Turning-Points;Collective -> 5. Weights -> 6. Archetypes
+             2. Duty -> 4. Outcome:Turning-Points;Collective -> 5. Weights -> 6. Precision-Relevance
                         /
                         3. Landscape
