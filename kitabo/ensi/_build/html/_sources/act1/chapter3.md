@@ -25,3 +25,15 @@
              2. Duty -> 4. Outcome:Turning-Points;Collective -> 5. Weights -> 6. Precision-Relevance
                         /
                         3. Landscape
+
+```{margin}
+<Details>
+   <Summary>Note</Summary>
+The phrase "never in the same river twice" refers to Heraclitus' idea of `flux` or `chaos` as foundational: that change is constant, and nothing remains the same. Every moment is unique, and the river you step into today is not the same river you stepped into yesterday because both you and the river have changed.
+
+The "categorical imperative," a concept developed by Immanuel Kant, dictates that one should act only according to maxims that one would want to become universal laws. It emphasizes the importance of moral duty and the principle of universality in ethical decision-making.
+
+"Beyond Good and Evil," a work by Friedrich Nietzsche, challenges traditional notions of morality. Nietzsche criticizes the dichotomy of good versus evil and advocates for a reevaluation of values, encouraging the creation of one's own values and moral framework, transcending societal norms.
+
+These concepts represent distinct philosophical approaches to understanding life, ethics, and change. Heraclitus highlights the flux and impermanence of existence, Kant focuses on a rigid, rational framework for morality, and Nietzsche provocatively calls for the creation of individual values beyond traditional moral constraints. Combining these perspectives can lead to a nuanced view that acknowledges the fluidity of life, the necessity of ethical principles, and the power of personal value creation.
+</Details>
