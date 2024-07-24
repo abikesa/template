@@ -8,17 +8,17 @@
                         3. h(t)
 
 
-## Time 1, 2, 3
-- Chaos: Time-to-event (grief, love)
+## Never Same River Twice 1, 2, 3
+- Chaos: Time-to-event (grief, love) {cite}`heraclitus_fragments`
 - Frenzy: No broken vow to duty or calling
 - Emotion: Instantaneous likelihood of breaking oath
 
-## Archetypes 4
-- Dionysian: stories: arcs (n) x values: honor-duty $(p)$ design matrix
+## Categorical Imperative 4
+- Dionysian: stories: arcs (n) x values: honor-duty $(p)$ design matrix {cite}`johnson_kant_moral`
 
-## Precision 5, 6
+## Beyond Good & Evil 5, 6
 - Algorithm defining `weights` of values or $(p)$ in relation to our fate and `destiny`
-- Binary: if an archetype is theme, you are one of the unique variations; no two people are identical
+- Binary: if an archetype is theme, you are one of the unique variations; no two people are identical {cite}`nietzsche_beyond_good_evil`
 
               1. Failure
                         \
