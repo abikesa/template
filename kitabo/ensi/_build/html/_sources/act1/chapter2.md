@@ -24,7 +24,44 @@ The phrase "throw a bone to chew on" typically means giving someone something to
 
 Ultimately, the effectiveness and ethical implications of "throwing a bone to chew on" depend on the context and the intentions behind the gesture. In all cases, it's crucial to consider whether the action genuinely addresses the needs and concerns of those involved or if it's merely a superficial tactic.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FqwLsSqWIBU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2x2 Video Panel</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+    .grid-item iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqwLsSqWIBU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="grid-item">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9wjSjpDwzsQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="grid-item">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9wjSjpDwzsQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="grid-item">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9wjSjpDwzsQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+</body>
+</html>
+
 
 ```{figure} ../figures/blanche.png
 ---

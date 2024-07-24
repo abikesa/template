@@ -17,7 +17,7 @@
 - Dionysian: stories: arcs (n) x values: honor-duty $(p)$ design matrix {cite}`johnson_kant_moral`
 
 ## Beyond Good & Evil 5, 6
-- Algorithm defining `weights` of values or $(p)$ in relation to our fate and `destiny`
+- Algorithm defining `weights`, values & priorities in relation to our fate and `destiny` {cite}`economist2024kamala`
 - Binary: if an archetype is theme, you are one of the unique variations; no two people are identical {cite}`nietzsche_beyond_good_evil`
 
               1. Failure
