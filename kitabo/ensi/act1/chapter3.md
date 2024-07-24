@@ -14,7 +14,7 @@
 - Emotion: Instantaneous likelihood of breaking oath
 
 ## Categorical Imperative 4
-- Dionysian: stories: arcs (n) x values: honor-duty $(p)$ design matrix {cite}`johnson_kant_moral`
+- Dionysian: stories: arcs (n) x values: honor-duty $(p)$ design matrix {cite}`johnson_kant_moral` {cite}`timesofisrael2024kamala`
 
 ## Beyond Good & Evil 5, 6
 - Algorithm defining `weights`, values & priorities in relation to our fate and `destiny` {cite}`economist2024kamala`
