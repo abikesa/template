@@ -479,6 +479,88 @@ document.write(`
 <img alt="_images/b9c44af393c650ca652ea8011ac04dc66e3919a3683cec91a0b0d8b73c2292de.png" src="_images/b9c44af393c650ca652ea8011ac04dc66e3919a3683cec91a0b0d8b73c2292de.png" />
 </div>
 </div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the tickers for the top 10 companies</span>
+<span class="n">tickers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;AAPL&#39;</span><span class="p">,</span>  <span class="c1"># Apple</span>
+    <span class="s1">&#39;MSFT&#39;</span><span class="p">,</span>  <span class="c1"># Microsoft</span>
+    <span class="s1">&#39;GOOGL&#39;</span><span class="p">,</span> <span class="c1"># Alphabet (Google)</span>
+    <span class="s1">&#39;AMZN&#39;</span><span class="p">,</span>  <span class="c1"># Amazon</span>
+    <span class="s1">&#39;META&#39;</span><span class="p">,</span>  <span class="c1"># Meta (Facebook)</span>
+    <span class="s1">&#39;TSLA&#39;</span><span class="p">,</span>  <span class="c1"># Tesla</span>
+    <span class="s1">&#39;BRK-B&#39;</span><span class="p">,</span> <span class="c1"># Berkshire Hathaway</span>
+    <span class="s1">&#39;NVDA&#39;</span><span class="p">,</span>  <span class="c1"># Nvidia</span>
+    <span class="s1">&#39;JPM&#39;</span><span class="p">,</span>   <span class="c1"># JPMorgan Chase</span>
+    <span class="s1">&#39;JNJ&#39;</span>    <span class="c1"># Johnson &amp; Johnson</span>
+<span class="p">]</span>
+
+<span class="c1"># Download historical data for the top 10 companies</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">tickers</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s1">&#39;2010-01-01&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="s1">&#39;1mo&#39;</span><span class="p">)</span>
+
+<span class="c1"># Example: Outstanding shares for each company (adjust with accurate data)</span>
+<span class="n">outstanding_shares</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;AAPL&#39;</span><span class="p">:</span> <span class="mi">16400000000</span><span class="p">,</span>
+    <span class="s1">&#39;MSFT&#39;</span><span class="p">:</span> <span class="mi">7500000000</span><span class="p">,</span>
+    <span class="s1">&#39;GOOGL&#39;</span><span class="p">:</span> <span class="mi">670000000</span><span class="p">,</span>
+    <span class="s1">&#39;AMZN&#39;</span><span class="p">:</span> <span class="mi">500000000</span><span class="p">,</span>
+    <span class="s1">&#39;META&#39;</span><span class="p">:</span> <span class="mi">2400000000</span><span class="p">,</span>
+    <span class="s1">&#39;TSLA&#39;</span><span class="p">:</span> <span class="mi">1000000000</span><span class="p">,</span>
+    <span class="s1">&#39;BRK-B&#39;</span><span class="p">:</span> <span class="mi">2200000000</span><span class="p">,</span>
+    <span class="s1">&#39;NVDA&#39;</span><span class="p">:</span> <span class="mi">2500000000</span><span class="p">,</span>
+    <span class="s1">&#39;JPM&#39;</span><span class="p">:</span> <span class="mi">3000000000</span><span class="p">,</span>
+    <span class="s1">&#39;JNJ&#39;</span><span class="p">:</span> <span class="mi">2700000000</span>
+<span class="p">}</span>
+
+<span class="c1"># Calculate market cap in billions</span>
+<span class="n">market_caps</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">tickers</span><span class="p">:</span>
+    <span class="n">shares</span> <span class="o">=</span> <span class="n">outstanding_shares</span><span class="p">[</span><span class="n">ticker</span><span class="p">]</span>
+    <span class="n">market_caps</span><span class="p">[</span><span class="n">ticker</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">][</span><span class="n">ticker</span><span class="p">]</span> <span class="o">*</span> <span class="n">shares</span> <span class="o">/</span> <span class="mf">1e9</span>
+
+<span class="c1"># Create a DataFrame for market caps</span>
+<span class="n">market_cap_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">market_caps</span><span class="p">)</span>
+
+<span class="c1"># Define line styles and colors</span>
+<span class="n">line_styles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">]</span>
+
+<span class="c1"># Plotting</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tickers</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">market_cap_df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">market_cap_df</span><span class="p">[</span><span class="n">ticker</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">ticker</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="n">line_styles</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Market Cap (Billions USD)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Top 10 Companies by Market Cap Over Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Show plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%%**********************]  10 of 10 completed
+</pre></div>
+</div>
+<img alt="_images/4f8953223bc712c69f77d0ab88151819fd1439917d73b64282bdf36048aa5f3a.png" src="_images/4f8953223bc712c69f77d0ab88151819fd1439917d73b64282bdf36048aa5f3a.png" />
+</div>
+</div>
 <Details>
    <Summary>ABCs</Summary>
 <ul class="simple">
