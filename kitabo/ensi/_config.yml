@@ -25,8 +25,7 @@ html:
   use_repository_button     : False  # Whether to add an "Repository" button to pages. If `true`, repository information in repository: must be filled in
   use_issues_button         : False  # Whether to add an "Open issue" button to pages. If `true`, repository information in repository: must be filled in
   use_edit_page_button      : False  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
-  extra_footer              : |
-    © 2025 ADM. All rights reserved.
+  extra_footer              : "© 2025 ADM. All rights reserved." 
   comments:
     hypothesis              : False # For data collection in top right corner
 
