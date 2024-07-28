@@ -5,9 +5,8 @@
 #######################################################################################
 # Book settings
 title                       : Template  # The title of the book. Will be placed in the left navbar.
-author                      : ADM  # The author of the book
-copyright                   : "2025"  # Copyright year to be placed in the footer
-logo                        : "https://github.com/jhufena/jhufena.github.io/blob/main/png/hub_and_spoke.jpg?raw=true"  # A path to the book logo
+author                      :    # The author of the book
+logo                        : "figures/hub_and_spoke.png"  # A path to the book logo
 email                       : "abikesa.sh@gmail.com"
 exclude_patterns            : ["LICENSE.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
@@ -27,7 +26,7 @@ html:
   use_issues_button         : False  # Whether to add an "Open issue" button to pages. If `true`, repository information in repository: must be filled in
   use_edit_page_button      : False  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
   extra_footer              : |
-    The Artist is the creator of beautiful things
+    © 2025 ADM. All rights reserved.
   comments:
     hypothesis              : False # For data collection in top right corner
   extra_css:
@@ -67,3 +66,12 @@ sphinx:
     bibtex_reference_style: 'label' # 'author_year'  
     bibtex_cite_style: 'numeric'
     bibtex_footbibliography_header: ''
+
+# HTML settings
+html:
+  favicon: "figures/hub_and_spoke.png"  # A path to the favicon
+  theme:
+    name: "alabaster"
+    custom_css: "_static/custom.css"
+
+ 
