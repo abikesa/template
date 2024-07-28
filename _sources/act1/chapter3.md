@@ -18,7 +18,7 @@
 
 ## Beyond Good & Evil 5, 6
 - Algorithm defining `weights`, values & priorities in relation to our fate and `destiny` {cite}`economist2024kamala` {cite}`economist2024zuckerberg` {cite}`youtube2024bc6uFV9CJGg` {cite}`lambdalabs_gpu_cloud`
-- Binary: if an archetype is theme, you are one of the unique variations; no two people are identical {cite}`nietzsche_beyond_good_evil`
+- Binary: ChatBot, RoBot or App to make all products & services highly personalized {cite}`nietzsche_beyond_good_evil`
 
               1. Failure
                         \
