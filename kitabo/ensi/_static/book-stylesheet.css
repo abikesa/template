@@ -86,15 +86,3 @@ table caption .footnote {
 tr:hover {
   background-color: #f7f7f7;
 }
-
-/* Adjust the logo size */
-.navbar-brand img {
-  width: 500px;  /* Adjust the width as needed */
-  height: auto;  /* This maintains the aspect ratio */
-}
-
-/* Adjust the logo size */
-.navbar-brand img {
-  width: 600px;  /* Adjust the width as needed */
-  height: auto;  /* This maintains the aspect ratio */
-}

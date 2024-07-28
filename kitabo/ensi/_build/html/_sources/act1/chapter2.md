@@ -3,7 +3,7 @@
 
 ```{margin}
    ```{note}
-*In Bach, God threw us a bone to chew on, we lucky few! {cite}`shakespeare_st_crispins_day_speech`*
+*In Bach, God threw us a bone to chew on, we few, we happy few! {cite}`shakespeare_st_crispins_day_speech`*
 ```
 
 The phrase "throw a bone to chew on" typically means giving someone something to occupy their attention or to think about. It's often used metaphorically, derived from the literal action of giving a dog a bone to keep it busy and satisfied. This phrase can be used in various contexts:
