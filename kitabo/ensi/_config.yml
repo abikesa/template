@@ -29,8 +29,6 @@ html:
     © 2025 ADM. All rights reserved.
   comments:
     hypothesis              : False # For data collection in top right corner
-  extra_css:
-    - "_static/custom.css"
 
 #######################################################################################
 # Launch button settings
@@ -72,6 +70,6 @@ html:
   favicon: "figures/hub_and_spoke.png"  # A path to the favicon
   theme:
     name: "alabaster"
-    custom_css: "_static/custom.css"
+    custom_css: "_static/book-stylesheet.css"
 
  

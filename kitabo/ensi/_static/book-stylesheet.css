@@ -92,3 +92,9 @@ tr:hover {
   width: 500px;  /* Adjust the width as needed */
   height: auto;  /* This maintains the aspect ratio */
 }
+
+/* Adjust the logo size */
+.navbar-brand img {
+  width: 100px;  /* Adjust the width as needed */
+  height: auto;  /* This maintains the aspect ratio */
+}
