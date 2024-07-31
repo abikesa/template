@@ -31,3 +31,23 @@
   vertical-align: super;
   font-size: 0.8em;
 }
+
+<style>
+.video-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Video container styling */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Adds space between the iframes */
+  justify-content: space-between;
+}
+
+.video-container iframe {
+  flex: 1 1 calc(50% - 1rem); /* Adjusts width to fit two videos side by side with a gap */
+  height: 300px; /* Adjust the height as needed */
+  border: none;
+}
