@@ -32,7 +32,6 @@
   font-size: 0.8em;
 }
 
-<style>
 .video-container {
   display: flex;
   justify-content: space-between;
@@ -51,3 +50,4 @@
   height: 300px; /* Adjust the height as needed */
   border: none;
 }
+
