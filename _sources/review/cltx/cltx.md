@@ -57,6 +57,14 @@ This is a very simple and clearly written analysis of a topical issue. I think i
 
 ![](https://www.economist.com/cdn-cgi/image/width=1424,quality=80,format=auto/content-assets/images/20240803_STD002.jpg)
 
+```{figure} figures/blanche.png
+---
+width: 1px
+height: 1px
+---
+*AI Mugshot*. to avoid seeming biased towards one-specific industry product, can the authors comment on other chatbots on the market including claude.ai, meta.ai, perplexity.ai, gemini, etc?.{cite}`chatgpt` {cite}`copilot` {cite}`claude` {cite}`metaai` {cite}`perplexity`
+```
+
 The authors assessed the accuracy of different versions of ChatGPT (3.5, 4, and 4V) in responding to kidney transplant cases from historical quizzes of the American Society of Nephrology (2015, 2014, 2013). There were two cases for each year, a case summary, lab results, an image (e.g. head CT), and multiple choice answers: for instance, which of the following is the most likely cause of her chest pain and CXR findings? [A] Lung cancer, [B] Recurrent breast cancer, [C] Pneumonia, [D] Sarcoidosis.
 
 Performance was benchmarked to nephrology fellows, transplant program directors, and an audience. Figure 1 offers a very powerful & accessible summary of the findings. GPT-4V almost matched the transplant program directors overall performance across the three years studied.
