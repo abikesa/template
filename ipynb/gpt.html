@@ -423,9 +423,108 @@ document.write(`
 <iframe width="100%" height="600" src="https://www.youtube.com/embed/bzQd86tBzek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <ul class="simple">
 <li><p>Text, <span class="math notranslate nohighlight">\(\mu\)</span>: Multimodal (beyond text input-token or melody-note)</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Clock settings; f(t) random disturbances making &quot;paradise lost&quot;</span>
+<span class="n">clock_face_radius</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">number_of_ticks</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">tick_labels</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Ionian&quot;</span><span class="p">,</span> <span class="s2">&quot;Dorian&quot;</span><span class="p">,</span> <span class="s2">&quot;Phrygian&quot;</span><span class="p">,</span> <span class="s2">&quot;Lydian&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Mixolydian&quot;</span><span class="p">,</span> <span class="s2">&quot;Aeolian&quot;</span><span class="p">,</span> <span class="s2">&quot;Locrian&quot;</span><span class="p">,</span> <span class="s2">&quot;Other&quot;</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate the angles for each tick (in radians)</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">number_of_ticks</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># Inverting the order to make it counterclockwise</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">angles</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Create figure and axis</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="c1"># Draw the clock face</span>
+<span class="n">clock_face</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">clock_face_radius</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">clock_face</span><span class="p">)</span>
+
+<span class="c1"># Draw the ticks and labels</span>
+<span class="k">for</span> <span class="n">angle</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">tick_labels</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="c1"># Draw the tick</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Positioning the labels slightly outside the clock face</span>
+    <span class="n">label_x</span> <span class="o">=</span> <span class="mf">1.1</span> <span class="o">*</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="n">label_y</span> <span class="o">=</span> <span class="mf">1.1</span> <span class="o">*</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="c1"># Adjusting label alignment based on its position</span>
+    <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span>
+    <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span>
+    <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;bottom&#39;</span>
+    <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;top&#39;</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="n">ha</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="n">va</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Remove axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="../_images/492afe6c5e2297f5a2db11a0bc71110a21ddb50742875d4065ab71b74c05c7af.png" src="../_images/492afe6c5e2297f5a2db11a0bc71110a21ddb50742875d4065ab71b74c05c7af.png" />
+</div>
+</details>
+</div>
+<ul class="simple">
 <li><p>Contex, <span class="math notranslate nohighlight">\(\sigma\)</span>: Better at recognizing patterns across modes (applicable as much to music)</p></li>
 <li><p>Pretext, <span class="math notranslate nohighlight">\(\%\)</span>: Improved prediction (in music its increased likelihood of marvelling from a <em>familiar ambiguity</em>)</p></li>
 </ul>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<Details>
+   <Summary></Summary>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AM</span></code>. great music is all about flirtation with “other” modes. While the modes are all within diatonic, the flirtation may borrow a mode from a different tonal center. Bach’s 1068ii, for instance, has an Ionian center on D, but its first flirtation is with the Dorian mode’s bII in bar 5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GPT</span></code>. Absolutely! Great music often involves a playful exploration of different modes and tonal centers, creating a rich and complex tapestry of sound. In Bach’s BWV 1068 II (Air), the piece is fundamentally in D major (Ionian mode), which provides a sense of stability and clarity.</p></li>
+</ul>
+<p>However, in bar 5, Bach introduces a C natural, which is the flattened second (bII) degree in the Dorian mode. This brief departure adds a layer of tension and intrigue, subtly shifting the listener’s expectations. The use of the bII (a note typically outside the Ionian mode of D) momentarily transports the piece into a different emotional and tonal space, creating a beautiful contrast before resolving back to the home key.</p>
+<p>This kind of modal mixture is a hallmark of Bach’s genius. By borrowing from the Dorian mode, he adds depth and variety to the music, making it both intellectually stimulating and emotionally resonant. It’s this interplay between familiar and unexpected elements that keeps listeners engaged and makes Bach’s compositions timeless.</p>
+<p>Do you see similar modal flirtations in other works that you enjoy?</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AM</span></code>. I’m all Bach for now. Actually, the C natural is correct. It first appears in bar 5, but it’s the II not bII of the dorian. The II of the dorian is F#-A-C</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GPT</span></code>. You’re absolutely right. In the context of Dorian mode, the II chord would indeed be F#-A-C. Bach’s use of C natural in bar 5 <code class="docutils literal notranslate"><span class="pre">still</span></code> represents a modal mixture, as it deviates from the pure D major scale. This subtle incorporation enriches the harmonic texture, providing a momentary shift that enhances the overall musical experience.</p></li>
+</ul>
+<p>Bach’s ability to weave these modal influences seamlessly into his compositions is a testament to his mastery. His work in BWV 1068 II demonstrates a sophisticated understanding of harmony and modal interplay, creating music that is both structurally intricate and deeply expressive.</p>
+<p>It’s fascinating to see how these modal shifts contribute to the emotional and intellectual depth of his music. Would you like to explore more specific examples of modal interplay in Bach’s other works?</p>
+</Details>
+</aside>
 <section id="mu-tokens-base-case-pretraining">
 <h2><span class="math notranslate nohighlight">\(\mu\)</span> <code class="docutils literal notranslate"><span class="pre">tokens</span></code> Base-case/Pretraining<a class="headerlink" href="#mu-tokens-base-case-pretraining" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
