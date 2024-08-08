@@ -461,6 +461,93 @@ document.write(`
                       3. h(t) 
 </pre></div>
 </div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Clock settings; f(t) random disturbances making &quot;paradise lost&quot;</span>
+<span class="n">clock_face_radius</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">number_of_ticks</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">tick_labels</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Ionian&quot;</span><span class="p">,</span> <span class="s2">&quot;Dorian&quot;</span><span class="p">,</span> <span class="s2">&quot;Phrygian&quot;</span><span class="p">,</span> <span class="s2">&quot;Lydian&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Mixolydian&quot;</span><span class="p">,</span> <span class="s2">&quot;Aeolian&quot;</span><span class="p">,</span> <span class="s2">&quot;Locrian&quot;</span><span class="p">,</span> <span class="s2">&quot;Other&quot;</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate the angles for each tick (in radians)</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">number_of_ticks</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># Inverting the order to make it counterclockwise</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">angles</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Create figure and axis</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="c1"># Draw the clock face</span>
+<span class="n">clock_face</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">clock_face_radius</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">clock_face</span><span class="p">)</span>
+
+<span class="c1"># Draw the ticks and labels</span>
+<span class="k">for</span> <span class="n">angle</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">tick_labels</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="c1"># Draw the tick</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Positioning the labels slightly outside the clock face</span>
+    <span class="n">label_x</span> <span class="o">=</span> <span class="mf">1.1</span> <span class="o">*</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    <span class="n">label_y</span> <span class="o">=</span> <span class="mf">1.1</span> <span class="o">*</span> <span class="n">clock_face_radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="c1"># Adjusting label alignment based on its position</span>
+    <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span>
+    <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span>
+    <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;bottom&#39;</span>
+    <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;top&#39;</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="n">ha</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="n">va</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Remove axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="../_images/492afe6c5e2297f5a2db11a0bc71110a21ddb50742875d4065ab71b74c05c7af.png" src="../_images/492afe6c5e2297f5a2db11a0bc71110a21ddb50742875d4065ab71b74c05c7af.png" />
+</div>
+</details>
+</div>
+<iframe width="100%" height="600px" src="https://www.youtube.com/embed/9zXiu-oGFus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="ii-gmu-inferno">
+<h2>ii GMU-Inferno<a class="headerlink" href="#ii-gmu-inferno" title="Permalink to this heading">#</a></h2>
+<section id="vaughn-mu">
+<h3>1 Vaughn, <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#vaughn-mu" title="Permalink to this heading">#</a></h3>
+<p><em>Sat July 6, 2024</em></p>
+<blockquote>
+<div><p><em>Each pulse in music can be populated by a sampling of modes, qualities, tension, extensions and alterations (MQ-TEA). These are <span class="math notranslate nohighlight">\(f_{modes}(t)\)</span>. How we harmonize our hand is guided by a cumulative wisdom such as <code class="docutils literal notranslate"><span class="pre">ii-V7-i</span></code>, each chord being a place-time holder for MQ-TEA variants. This is <span class="math notranslate nohighlight">\(S(t)\)</span>. <code class="docutils literal notranslate"><span class="pre">V7</span></code> is often enriched by chord non-progressions with the full range of available MQ-TEA, or by very-progressive changes in tonal center. Home-cuming to <code class="docutils literal notranslate"><span class="pre">i</span></code> must never be premature <span class="math notranslate nohighlight">\(h(f)\)</span>. Instead, the MQ-TEA obstacle-course must prevail at all times. <span class="math notranslate nohighlight">\((X'X)^T \cdot X'Y\)</span> is the collective repository of all music mankind has created, from whence one might catalog latent patterns and genres <span class="math notranslate nohighlight">\(\beta\)</span>. But the superior artists digests the broadest possible number of these <span class="math notranslate nohighlight">\(SV'\)</span> and many will find their music resonant across place, time &amp; circumstance</em></p>
+</div></blockquote>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <Details>
@@ -528,15 +615,6 @@ document.write(`
 </div>
 </Details>
 </aside>
-<iframe width="100%" height="600px" src="https://www.youtube.com/embed/9zXiu-oGFus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<section id="ii-gmu-inferno">
-<h2>ii GMU-Inferno<a class="headerlink" href="#ii-gmu-inferno" title="Permalink to this heading">#</a></h2>
-<section id="vaughn-mu">
-<h3>1 Vaughn, <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#vaughn-mu" title="Permalink to this heading">#</a></h3>
-<p><em>Sat July 6, 2024</em></p>
-<blockquote>
-<div><p><em>Archetype: Latent, compressed, abstract, uncommunicable, dionysian to the native. But encoded by out ears. Vaughn was a nice <code class="docutils literal notranslate"><span class="pre">base-case</span></code> from which to launch a late-stage entry to gospel</em></p>
-</div></blockquote>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                     1. Pessimism
                                  \
         2. Beyond Good &amp; Evil -&gt; 4. Uncommunicable -&gt; 5. Science -&gt; 6. Morality
