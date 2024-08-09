@@ -398,9 +398,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allegory">Allegory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-mu-starch"><code class="docutils literal notranslate"><span class="pre">ii</span></code>: <span class="math notranslate nohighlight">\(\mu\)</span> Starch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v7-sigma-yeast"><code class="docutils literal notranslate"><span class="pre">V7</span></code>: <span class="math notranslate nohighlight">\(\sigma\)</span> Yeast</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-profile"><code class="docutils literal notranslate"><span class="pre">i</span></code>: <span class="math notranslate nohighlight">\(\%\)</span> Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-mu-yeast"><code class="docutils literal notranslate"><span class="pre">ii</span></code>: <span class="math notranslate nohighlight">\(\mu\)</span> Yeast</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v7-sigma-temperature"><code class="docutils literal notranslate"><span class="pre">V7</span></code>: <span class="math notranslate nohighlight">\(\sigma\)</span> Temperature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-other"><code class="docutils literal notranslate"><span class="pre">i</span></code>: <span class="math notranslate nohighlight">\(\%\)</span> Other</a></li>
 </ul>
 </li>
 </ul>
@@ -428,8 +428,8 @@ document.write(`
 </div>
 <section id="allegory">
 <h2>Allegory<a class="headerlink" href="#allegory" title="Permalink to this heading">#</a></h2>
-<section id="ii-mu-starch">
-<h3><code class="docutils literal notranslate"><span class="pre">ii</span></code>: <span class="math notranslate nohighlight">\(\mu\)</span> Starch<a class="headerlink" href="#ii-mu-starch" title="Permalink to this heading">#</a></h3>
+<section id="ii-mu-yeast">
+<h3><code class="docutils literal notranslate"><span class="pre">ii</span></code>: <span class="math notranslate nohighlight">\(\mu\)</span> Yeast<a class="headerlink" href="#ii-mu-yeast" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Gueuze, Iambic, Saison</p></li>
 <li><p>Oud Bruin, Flanders Red Ale</p></li>
@@ -514,18 +514,65 @@ document.write(`
 </details>
 </div>
 </section>
-<section id="v7-sigma-yeast">
-<h3><code class="docutils literal notranslate"><span class="pre">V7</span></code>: <span class="math notranslate nohighlight">\(\sigma\)</span> Yeast<a class="headerlink" href="#v7-sigma-yeast" title="Permalink to this heading">#</a></h3>
+<section id="v7-sigma-temperature">
+<h3><code class="docutils literal notranslate"><span class="pre">V7</span></code>: <span class="math notranslate nohighlight">\(\sigma\)</span> Temperature<a class="headerlink" href="#v7-sigma-temperature" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Determines sensory compounds &amp; is a control-step in modern brewing (e.g. Brett is typically viewed as a contaminant)</p></li>
 </ul>
 </section>
-<section id="i-profile">
-<h3><code class="docutils literal notranslate"><span class="pre">i</span></code>: <span class="math notranslate nohighlight">\(\%\)</span> Profile<a class="headerlink" href="#i-profile" title="Permalink to this heading">#</a></h3>
+<section id="i-other">
+<h3><code class="docutils literal notranslate"><span class="pre">i</span></code>: <span class="math notranslate nohighlight">\(\%\)</span> Other<a class="headerlink" href="#i-other" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Additives including sugar, fruit for bottle conditioning</p></li>
-<li><p>May consider this as a “return” to start after the fermentation yielded alcohol and departure</p></li>
+<li><p>Parameters <span class="math notranslate nohighlight">\(\beta\)</span>: malt, yeast, hops, water, other (oustide <code class="docutils literal notranslate"><span class="pre">Reinheitsgebot</span></code>)</p></li>
+<li><p>Combination of these parameters will give character</p></li>
 </ul>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<Details>
+   <Summary></Summary>
+<p>Absolutely, let’s specify the type of bacteria involved:</p>
+<div class="pst-scrollable-table-container"><table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Belgian Beer</p></th>
+<th class="head"><p>Distinguishing Parameter</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Westmalle Tripel</strong></p></td>
+<td><p>Yeast (Trappist)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Orval</strong></p></td>
+<td><p>Yeast (<em>Brettanomyces</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Chimay Blue</strong></p></td>
+<td><p>Malt (Rich)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Rochefort 10</strong></p></td>
+<td><p>Malt (High alcohol, dark <code class="docutils literal notranslate"><span class="pre">fruit</span></code> complexity)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Duvel</strong></p></td>
+<td><p>Carbonation (High)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gueuze</strong></p></td>
+<td><p>Fermentation (Wild yeast <em>Brettanomyces</em> and bacteria <em>Lactobacilli</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Lambic (e.g., Cantillon)</strong></p></td>
+<td><p>Fermentation (Wild yeast <em>Brettanomyces</em> and bacteria <em>Lactobacilli</em>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Westvleteren 12</strong></p></td>
+<td><p>Balance (Complexity of ingredients)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Leffe Blond</strong></p></td>
+<td><p>Yeast (Subtle sweetness from yeast)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gouden Carolus</strong></p></td>
+<td><p>Malt (Rich malty backbone)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</Details>
+</aside>
 </section>
 </section>
 </section>
@@ -577,9 +624,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allegory">Allegory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-mu-starch"><code class="docutils literal notranslate"><span class="pre">ii</span></code>: <span class="math notranslate nohighlight">\(\mu\)</span> Starch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v7-sigma-yeast"><code class="docutils literal notranslate"><span class="pre">V7</span></code>: <span class="math notranslate nohighlight">\(\sigma\)</span> Yeast</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-profile"><code class="docutils literal notranslate"><span class="pre">i</span></code>: <span class="math notranslate nohighlight">\(\%\)</span> Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-mu-yeast"><code class="docutils literal notranslate"><span class="pre">ii</span></code>: <span class="math notranslate nohighlight">\(\mu\)</span> Yeast</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v7-sigma-temperature"><code class="docutils literal notranslate"><span class="pre">V7</span></code>: <span class="math notranslate nohighlight">\(\sigma\)</span> Temperature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-other"><code class="docutils literal notranslate"><span class="pre">i</span></code>: <span class="math notranslate nohighlight">\(\%\)</span> Other</a></li>
 </ul>
 </li>
 </ul>
