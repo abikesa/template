@@ -444,7 +444,7 @@ document.write(`
 
 <span class="c1"># Parameters</span>
 <span class="n">sample_rate</span> <span class="o">=</span> <span class="mi">44100</span>  <span class="c1"># Hz</span>
-<span class="n">duration</span> <span class="o">=</span> <span class="mf">2.0</span>       <span class="c1"># seconds</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="mf">20.0</span>       <span class="c1"># seconds</span>
 <span class="n">A4_freq</span> <span class="o">=</span> <span class="mf">440.0</span>      <span class="c1"># Hz</span>
 
 <span class="c1"># Time array</span>
@@ -454,8 +454,8 @@ document.write(`
 <span class="n">signal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">A4_freq</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
 
 <span class="c1"># Adding overtones (harmonics)</span>
-<span class="n">harmonics</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>  <span class="c1"># First few harmonics</span>
-<span class="n">amplitudes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">]</span>  <span class="c1"># Amplitudes for each harmonic</span>
+<span class="n">harmonics</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>  <span class="c1"># First few harmonics</span>
+<span class="n">amplitudes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">]</span>  <span class="c1"># Amplitudes for each harmonic</span>
 
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">harmonic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">harmonics</span><span class="p">):</span>
     <span class="n">signal</span> <span class="o">+=</span> <span class="n">amplitudes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">A4_freq</span> <span class="o">*</span> <span class="n">harmonic</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
@@ -500,7 +500,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../_images/43837cba0d7a1f9bd91c4bcf2926cb9a38a81283ee78f233447763668728e295.png" src="../_images/43837cba0d7a1f9bd91c4bcf2926cb9a38a81283ee78f233447763668728e295.png" />
+<img alt="../_images/b9950b25170d4ecc98e1a4241757c81e1caf9eba5649a5db9f7c6c6f469799cc.png" src="../_images/b9950b25170d4ecc98e1a4241757c81e1caf9eba5649a5db9f7c6c6f469799cc.png" />
 </div>
 </details>
 </div>
