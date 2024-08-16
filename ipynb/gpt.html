@@ -555,6 +555,64 @@ The attention mechanism is key to this process. It allows the model to weigh the
 </div>
 </li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="c1"># Parameters for German distribution</span>
+<span class="n">N_german</span> <span class="o">=</span> <span class="mi">124038</span>
+<span class="n">mean_german</span> <span class="o">=</span> <span class="mi">1387</span>
+<span class="n">std_german</span> <span class="o">=</span> <span class="mi">389</span>
+
+<span class="c1"># Parameters for FIDE distribution</span>
+<span class="n">N_fide</span> <span class="o">=</span> <span class="mi">120725</span>
+<span class="n">mean_fide</span> <span class="o">=</span> <span class="mi">2122</span>
+<span class="n">std_fide</span> <span class="o">=</span> <span class="mi">182</span>
+
+<span class="c1"># Generate x values</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mean_german</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">std_german</span><span class="p">,</span> <span class="n">mean_fide</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">std_fide</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Calculate the t-distributions</span>
+<span class="n">density_german</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">N_german</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mean_german</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">std_german</span><span class="p">)</span>
+<span class="n">density_fide</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">N_fide</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mean_fide</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">std_fide</span><span class="p">)</span>
+
+<span class="c1"># Plotting the distributions</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">density_german</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;German&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">density_fide</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;FIDE&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">density_german</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">density_fide</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="c1"># Customizing the aesthetics</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Overlayed t-Distributions: German vs FIDE&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Values&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Remove the top and right spines</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Add a very light dotted grid</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6ecbf4a7c73bc54e4e58fcdc690e8750cfc428c35389d4fbc91f5e5eef3b9dda.png" src="../_images/6ecbf4a7c73bc54e4e58fcdc690e8750cfc428c35389d4fbc91f5e5eef3b9dda.png" />
+</div>
+</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/chatbots.png"><img alt="../_images/chatbots.png" src="../_images/chatbots.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>Elo Rating as reported by <a class="reference external" href="http://X.ai">X.ai</a>&#64;Grok</em>. Distribution of chess skill as measured by Elo rating in FIDE (blue color) and German (red) databases (as of 2008) for reference. The databases contain similar number of players, but differ vastly in the distribution shape and coverage—the only overlap is at the highest values of the German database and lowest values of the FIDE database.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
