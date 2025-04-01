@@ -157,8 +157,8 @@
       
     
     
-    <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/DeBarge_group_photo_%28ca_1983%29.jpg" class="logo__image only-light" alt="Time - Home"/>
-    <script>document.write(`<img src="https://upload.wikimedia.org/wikipedia/en/c/cd/DeBarge_group_photo_%28ca_1983%29.jpg" class="logo__image only-dark" alt="Time - Home"/>`);</script>
+    <img src="../_static/DeBarge.jpg" class="logo__image only-light" alt="Time - Home"/>
+    <script>document.write(`<img src="../_static/DeBarge.jpg" class="logo__image only-dark" alt="Time - Home"/>`);</script>
   
   
 </a></div>
@@ -416,12 +416,12 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
 
 <span class="c1"># Define the neural network fractal</span>
-<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Electro&#39;</span><span class="p">,</span> <span class="s1">&#39;Magnetic&#39;</span><span class="p">,</span> <span class="s2">&quot;I&#39;Sobantu&quot;</span><span class="p">,</span> <span class="s1">&#39;Cost&#39;</span><span class="p">,</span> <span class="s1">&#39;Trial&#39;</span><span class="p">,</span> <span class="s1">&#39;Error&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="c1"># Veni; 95/5</span>
         <span class="s1">&#39;Mode&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ukubona&#39;</span><span class="p">],</span> <span class="c1"># Vidi; 80/20</span>
@@ -431,7 +431,7 @@ document.write(`
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
-<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">assign_colors</span><span class="p">():</span>
     <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ukubona&#39;</span><span class="p">],</span>  
         <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Descending&#39;</span><span class="p">,</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;A Priori&#39;</span><span class="p">],</span>  
@@ -444,12 +444,12 @@ document.write(`
     <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
 
 <span class="c1"># Calculate positions for nodes</span>
-<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
     <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
 
 <span class="c1"># Create and visualize the neural network graph</span>
-<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
     <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
     <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
@@ -498,17 +498,17 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="k">def</span> <span class="nf">draw_triangle</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_triangle</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws a triangle given vertices and labels for each vertex with matching color.&quot;&quot;&quot;</span>
     <span class="n">triangle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vertices</span><span class="p">):</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>  <span class="c1"># Set label color</span>
 
-<span class="k">def</span> <span class="nf">get_triangle_vertices_3d</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">perspective_scale</span><span class="p">,</span> <span class="n">tilt</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_triangle_vertices_3d</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">perspective_scale</span><span class="p">,</span> <span class="n">tilt</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the vertices of a tilted equilateral triangle for a 3D effect.</span>
 <span class="sd">    `perspective_scale` shrinks the triangle to simulate depth.</span>
@@ -569,7 +569,7 @@ document.write(`
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="figures/blanche.*"><img alt="figures/blanche.*" src="figures/blanche.*" style="width: 1px; height: 1px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text"><em><strong>Roman Strategy &amp; Judas Betrayal: Tact, Firmness, Soundness.</strong></em> DNA (biology) encodes a sophisticated system for risk assessment, dynamically responding to climate, locality, diet, and recreational activity, while language (sociology) accelerates iteration by providing rapid adaptive feedback. Language, in turn, can trigger DNA-driven pathways, bridging sociological interaction with biological underpinnings. The interplay of molecular equilibria mirrors the three forces fundamental to music: rhythm, chords, and melody. <strong>Cooperative/Rhythm</strong> is governed by molecules such as oxytocin, endorphins, and serotonin, which foster emotional bonding, cyclical harmony, and trust. Oxytocin, for example, mimicked by MDMA (“ecstasy”), enhances social bonding and euphoria by stimulating serotonin pathways. <strong>Iterative/Chords</strong> depend on GABA, adenosine, and melatonin, which regulate balance, rest, and diurnal recalibration, maintaining homeostasis through cyclical processes. <strong>Adversarial/Conflict</strong> engages glutamate, adrenaline, and cortisol, molecules that incite tension and drive transformative action. Noradrenaline heightens focus during adversarial challenges, dopamine incentivizes tokenization through reward mechanisms, and serotonin, bridging all three forces, stabilizes embodiment by integrating rhythm with meaning. This biochemical choreography underscores the fractal complexity of human systems, aligning biology, sociology, and music as interconnected pathways of adaptation.<br />
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text"><em><strong>Roman Strategy &amp; Judas Betrayal: Tact, Firmness, Soundness.</strong></em> DNA (biology) encodes a sophisticated system for risk assessment, dynamically responding to climate, locality, diet, and recreational activity, while language (sociology) accelerates iteration by providing rapid adaptive feedback. Language, in turn, can trigger DNA-driven pathways, bridging sociological interaction with biological underpinnings. The interplay of molecular equilibria mirrors the three forces fundamental to music: rhythm, chords, and melody. <strong>Cooperative/Rhythm</strong> is governed by molecules such as oxytocin, endorphins, and serotonin, which foster emotional bonding, cyclical harmony, and trust. Oxytocin, for example, mimicked by MDMA (“ecstasy”), enhances social bonding and euphoria by stimulating serotonin pathways. <strong>Iterative/Chords</strong> depend on GABA, adenosine, and melatonin, which regulate balance, rest, and diurnal recalibration, maintaining homeostasis through cyclical processes. <strong>Adversarial/Conflict</strong> engages glutamate, adrenaline, and cortisol, molecules that incite tension and drive transformative action. Noradrenaline heightens focus during adversarial challenges, dopamine incentivizes tokenization through reward mechanisms, and serotonin, bridging all three forces, stabilizes embodiment by integrating rhythm with meaning. This biochemical choreography underscores the fractal complexity of human systems, aligning biology, sociology, and music as interconnected pathways of adaptation.<br />
 <span id="id2"><sup><a class="reference internal" href="../bibliography.html#id58" title="Dante Alighieri. The Divine Comedy: Volume 1: Inferno. Penguin Classics, 1984. URL: https://www.gutenberg.org/cache/epub/997/pg997-images.html.">1</a></sup></span> <span id="id3"><sup><a class="reference internal" href="../bibliography.html#id59" title="Dante Alighieri. The Divine Comedy: Volume 2: Purgatorio. Penguin Classics, 1984. URL: https://www.gutenberg.org/cache/epub/998/pg998-images.html.">2</a></sup></span> <span id="id4"><sup><a class="reference internal" href="../bibliography.html#id60" title="Dante Alighieri. The Divine Comedy: Volume 3: Paradiso. Penguin Classics, 1984. URL: https://www.gutenberg.org/cache/epub/999/pg999-images.html.">3</a></sup></span></span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
