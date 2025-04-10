@@ -3,67 +3,69 @@ async function loadCalculator() {
     const calculatorContainer = document.getElementById('calculator-container');
     const dynamicScripts = document.getElementById('dynamic-scripts');
 
-    // Clear previous content
+    // Clear previous content and scripts
     calculatorContainer.innerHTML = '';
-
-    // Clear existing scripts
     while (dynamicScripts.firstChild) {
         dynamicScripts.removeChild(dynamicScripts.firstChild);
     }
 
-    // Load the general files if not already loaded
+    // Define LOCAL script paths based on selection
     let scriptsToLoad = [];
 
     if (selectedCalculator === '30year') {
         scriptsToLoad = [
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test3/assets/js/modelSwitch.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test3/assets/js/plotRisk.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test3/assets/js/riskCalculator.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test3/assets/js/variableMenu.js'
+            '../test3/assets/js/modelSwitch.js',
+            '../test3/assets/js/plotRisk.js',
+            '../test3/assets/js/riskCalculator.js',
+            '../test3/assets/js/variableMenu.js'
         ];
     } else if (selectedCalculator === '90day') {
         scriptsToLoad = [
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test2/assets/js/modelSwitch.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test2/assets/js/plotRisk.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test2/assets/js/riskCalculator.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test2/assets/js/variableMenu.js'
+            '../test2/assets/js/modelSwitch.js',
+            '../test2/assets/js/plotRisk.js',
+            '../test2/assets/js/riskCalculator.js',
+            '../test2/assets/js/variableMenu.js'
         ];
     } else {
         scriptsToLoad = [
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test4/assets/js/variableMenu.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test4/assets/js/riskCalculator.js',
-            'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test4/assets/js/plotRisk.js'
+            '../test4/assets/js/variableMenu.js',
+            '../test4/assets/js/riskCalculator.js',
+            '../test4/assets/js/plotRisk.js'
         ];
     }
 
+    // Dynamically inject <script> tags
     const loadScripts = scriptsToLoad.map(src => {
         return new Promise((resolve, reject) => {
-            if (!document.querySelector(`script[src="${src}"]`)) {
-                const script = document.createElement('script');
-                script.src = src;
-                script.async = false; // Ensure scripts are executed in order
-                script.onload = resolve;
-                script.onerror = reject;
-                dynamicScripts.appendChild(script);
-            } else {
+            const script = document.createElement('script');
+            script.src = src;
+            script.async = false;
+            script.onload = () => {
+                console.log(`Loaded script: ${src}`);
                 resolve();
-            }
+            };
+            script.onerror = () => {
+                console.error(`Failed to load script: ${src}`);
+                reject(new Error(`Failed to load ${src}`));
+            };
+            dynamicScripts.appendChild(script);
         });
     });
 
-    if (!document.querySelector('link[href="https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test5/assets/css/style.css"]')) {
+    // Inject local CSS if not already present
+    const cssHref = './assets/css/style.css';
+    if (!document.querySelector(`link[href="${cssHref}"]`)) {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = 'https://raw.githack.com/Vince-Jin/testbin/refs/heads/main/test5/assets/css/style.css';
+        link.href = cssHref;
         document.head.appendChild(link);
     }
 
-    // Load the calculator content based on the selection
+    // Render static calculator HTML
     if (selectedCalculator === '90day') {
         calculatorContainer.innerHTML = `
             <div class="calculator-container">
                 <h1>90-Day Mortality Risk Calculator</h1>
-                <!-- Model Selection Slide Bar -->
                 <div class="model-toggle-container">
                     <span id="model1Label">Model 1</span>
                     <label class="switch">
@@ -87,7 +89,6 @@ async function loadCalculator() {
         calculatorContainer.innerHTML = `
             <div class="calculator-container">
                 <h1>30-Year Mortality Risk Calculator</h1>
-                <!-- Model Selection Slide Bar -->
                 <div class="model-toggle-container">
                     <span id="model1Label">Mortality</span>
                     <label class="switch">
@@ -127,15 +128,42 @@ async function loadCalculator() {
         `;
     }
 
-    // Ensure the scripts are executed after being added to the DOM
-    await Promise.all(loadScripts);
+    // Wait for all scripts to load, then call model/data functions
+    try {
+        await Promise.all(loadScripts);
 
-    // Load model data and survival data
-    if (selectedCalculator === '30year' || selectedCalculator === '90day') {
-        toggleModel();
-    } else {
-        await loadModelData();
-        await loadSurvivalData();
-        updateVariableInputs();
+        if (selectedCalculator === '30year' || selectedCalculator === '90day') {
+            if (typeof toggleModel === 'function') {
+                toggleModel();
+            } else {
+                console.error('toggleModel() not defined');
+            }
+        } else {
+            if (typeof loadModelData === 'function') await loadModelData();
+            if (typeof loadSurvivalData === 'function') await loadSurvivalData();
+            if (typeof updateVariableInputs === 'function') updateVariableInputs();
+        }
+    } catch (err) {
+        console.error('Error loading scripts or initializing calculator:', err);
     }
 }
+# flick 20250409213601-E8RP
+# flick 20250409214208-WrsX
+# flick 20250409214624-0jdB
+# flick 20250409220134-ZymH
+# flick 20250409231150-frjT
+# flick 20250410002732-tY7A
+# flick 20250410003324-gRcf
+# flick 20250410004048-t3JI
+# flick 20250410014856-3NYp
+# flick 20250410030139-lE7S
+# flick 20250410031044-t77u
+# flick 20250410032005-CLz0
+# flick 20250410140618-BVI7
+# flick 20250410145600-oLr2
+# flick 20250410152045-2nxH
+# flick 20250410152850-TEF8
+# flick 20250410161627-2kJG
+# flick 20250410202641-ZTDN
+# flick 20250410205356-SFwu
+# flick 20250410213331-rjKY
