@@ -108,4 +108,19 @@ zipp>=3.17.0
 jupyter-book>=0.12.0
 myst-nb<3
 myst-parser<3
-pydata-sphinx-theme>=0.15.2
+pydata-sphinx-theme>=0.15.2# flick 20250409213558-daOf
+# flick 20250409214205-fSDX
+# flick 20250409214621-oTTh
+# flick 20250409231151-WlLi
+# flick 20250409234308-ZFpq
+# flick 20250410005408-IQ2v
+# flick 20250410010503-pkgW
+# flick 20250410014855-xU0f
+# flick 20250410032117-f4Kv
+# flick 20250410130448-XQad
+# flick 20250410144303-TnCM
+# flick 20250410151213-4kl7
+# flick 20250410161629-N6UT
+# flick 20250410162733-7Eo4
+# flick 20250410204359-DBqH
+# flick 20250410212158-VijT
